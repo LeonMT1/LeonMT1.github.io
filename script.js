@@ -1,9 +1,9 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     const menu = document.querySelector('.menu');
     const navbar = document.querySelector('.navbar');
     const sidebar = document.getElementById('sidebar');
 
-    menu.addEventListener('click', function() {
+    menu.addEventListener('click', function () {
         toggleSidebar();
     });
 
@@ -20,4 +20,45 @@ document.addEventListener('DOMContentLoaded', function() {
             navbar.style.left = '350px';
         }
     }
+
+    // Initial anzeigen
+    let currentProject = 1;
+    const totalProjects = document.querySelectorAll('.project').length; // Füge diese Zeile hinzu
+    showProject(currentProject, totalProjects); // Füge totalProjects als Parameter hinzu
+
+    function showProject(index, totalProjects) {
+        // Alle Projekte ausblenden
+        document.querySelectorAll('.project').forEach(project => {
+            project.style.display = 'none';
+        });
+
+        // Aktuelles Projekt anzeigen
+        document.getElementById(`project${index}`).style.display = 'flex';
+
+        // Überprüfen und aktualisieren der totalProjects-Variable
+        if (index < 1) {
+            currentProject = totalProjects;
+        } else if (index > totalProjects) {
+            currentProject = 1;
+        }
+    }
+
+    function nextProject() {
+        currentProject = (currentProject % totalProjects) + 1;
+        showProject(currentProject, totalProjects);
+    }
+
+    function prevProject() {
+        currentProject = (currentProject - 2 + totalProjects) % totalProjects + 1;
+        showProject(currentProject, totalProjects);
+    }
+
+    // Event Listener für Pfeilbuttons
+    document.querySelector('.next-btn').addEventListener('click', function () {
+        nextProject();
+    });
+
+    document.querySelector('.prev-btn').addEventListener('click', function () {
+        prevProject();
+    });
 });

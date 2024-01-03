@@ -19,6 +19,7 @@ body {
     z-index: 1000;
     border-radius: 10px; /* Abrundung der Ecken */
     transition: width 0.3s, left 0.3s;
+    user-select: none;
 }
 
 .menu {
@@ -75,3 +76,52 @@ body {
     display: block;
     margin-bottom: 15px;
 }
+
+.slider-container {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .project {
+    margin-top: 100px;
+    width: 100%;
+    box-sizing: border-box;
+    display: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:rgb(209, 209, 209);
+}
+  
+  .project h2 {
+    margin-bottom: 10px;
+  }
+
+  .prev-btn {
+    position: absolute;
+    top: 20%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    user-select: none;
+    }
+
+  .next-btn {
+    position: absolute;
+    top: 20%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  /* Initial anzeigen */
+  #project1 {
+    display: block;
+  }
