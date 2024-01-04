@@ -65,37 +65,4 @@ document.addEventListener('DOMContentLoaded', function () {
         prevProject();
     });
 
-    // Profil-Slider
-    let currentProfile = 1;
-    const totalProfiles = document.querySelectorAll('.profile-slide').length;
-
-    function showProfile(index) {
-        document.querySelectorAll('.profile-slide').forEach(profile => {
-            profile.style.display = 'none';
-        });
-        document.getElementById(`profile${index}`).style.display = 'flex';
-    }
-
-    function nextProfile() {
-        currentProfile = (currentProfile % totalProfiles) + 1;
-        showProfile(currentProfile);
-    }
-
-    function prevProfile() {
-        currentProfile = (currentProfile - 2 + totalProfiles) % totalProfiles + 1;
-        showProfile(currentProfile);
-    }
-
-    // Event Listener für Profil-Slider
-    document.querySelector('.next-btn-profile').addEventListener('click', function () {
-        nextProfile();
-    });
-
-    document.querySelector('.prev-btn-profile').addEventListener('click', function () {
-        prevProfile();
-    });
-
-    // Initial anzeigen für Projekt- und Profil-Slider
-    showProject(currentProject, totalProjects);
-    showProfile(currentProfile);
 });
