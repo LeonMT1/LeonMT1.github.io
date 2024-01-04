@@ -151,8 +151,9 @@ body {
   .slider-container2 {
     display: flex;
     overflow: hidden;
-    margin-left: 315px;
-    margin-top: 20px;
+    justify-content: center; /* Horizontal zentrieren */
+    align-items: center; /* Vertikal zentrieren */
+    margin: 20px;
 }
 
 .profile-slide {
@@ -181,4 +182,66 @@ body {
 .profile-info span {
     font-size: 14px; /* Beispiel für die kleinere Text-Größe */
     color: #888; /* Beispiel für die dunklere Textfarbe */
+}
+
+.schwarze-box {
+    background-color: #000;
+    color: #888; /* Dunklerer Text */
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatten für die Box */
+  }
+
+  .schwarze-box h2 {
+    color: #fff; /* Weißer Titel */
+  }
+
+  .contact-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #43474e;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.contact-container h2 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #888;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #f57c00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ffffff;
+    color: #f57c00;
 }
