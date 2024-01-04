@@ -31,10 +31,21 @@ body {
     transform: scale(1.1); /* Vergrößere das Bild beim Überfahren mit der Maus */
 }
 
+.clickable-word {
+    color: rgb(255, 0, 0); /* Farbe für den anklickbaren Text */
+    cursor: pointer;
+}
+
 .logo-text {
     font-size: 24px;
     font-weight: bold;
     margin-left: 10px;
+}
+
+.hykloslink {
+    color: orange;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .nav-links {
@@ -83,7 +94,7 @@ body {
   }
   
   .project {
-    margin-top: 100px;
+    margin-top: 150px;
     width: 100%;
     box-sizing: border-box;
     display: none;
@@ -93,6 +104,17 @@ body {
     align-items: center;
     justify-content: center;
     color:rgb(209, 209, 209);
+    opacity: 0; /* Startwert für die Animation */
+    animation: fadeIn 1s ease-in-out forwards; /* Animation hinzufügen */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Startwert */
+    }
+    to {
+        opacity: 1; /* Endwert */
+    }
 }
   
   .project h2 {
@@ -101,7 +123,7 @@ body {
 
   .prev-btn {
     position: absolute;
-    top: 20%;
+    top: 23%;
     left: 20px;
     transform: translateY(-50%);
     font-size: 30px;
@@ -112,7 +134,7 @@ body {
 
   .next-btn {
     position: absolute;
-    top: 20%;
+    top: 23%;
     right: 20px;
     transform: translateY(-50%);
     font-size: 30px;
@@ -125,3 +147,38 @@ body {
   #project1 {
     display: block;
   }
+
+  .slider-container2 {
+    display: flex;
+    overflow: hidden;
+    margin-left: 315px;
+    margin-top: 20px;
+}
+
+.profile-slide {
+    width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: black;
+    border-radius: 10px;
+    margin-right: 20px;
+    color: white;
+    text-align: center;
+}
+
+.profile-info img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.profile-info h3 {
+    font-size: 20px; /* Beispiel für die Überschriften-Größe */
+    color: white; /* Farbe für die Überschrift */
+}
+
+.profile-info span {
+    font-size: 14px; /* Beispiel für die kleinere Text-Größe */
+    color: #888; /* Beispiel für die dunklere Textfarbe */
+}

@@ -61,4 +61,38 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.prev-btn').addEventListener('click', function () {
         prevProject();
     });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        let currentProfile = 1;
+        const totalProfiles = document.querySelectorAll('.profile-slide').length;
+    
+        function showProfile(index) {
+            document.querySelectorAll('.profile-slide').forEach(profile => {
+                profile.style.display = 'none';
+            });
+            document.getElementById(`profile${index}`).style.display = 'flex';
+        }
+    
+        function nextProfile() {
+            currentProfile = (currentProfile % totalProfiles) + 1;
+            showProfile(currentProfile);
+        }
+    
+        function prevProfile() {
+            currentProfile = (currentProfile - 2 + totalProfiles) % totalProfiles + 1;
+            showProfile(currentProfile);
+        }
+    
+        document.querySelector('.next-btn').addEventListener('click', function () {
+            nextProfile();
+        });
+    
+        document.querySelector('.prev-btn').addEventListener('click', function () {
+            prevProfile();
+        });
+    
+        // Initial anzeigen
+        showProfile(currentProfile);
+    });
+    
 });
