@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
             navbar.style.width = '1480px';
             navbar.style.left = '350px';
         }
-    }
+    } 
 
     // Projekt-Slider
     let currentProject = 1;
@@ -64,5 +64,4 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.prev-btn').addEventListener('click', function () {
         prevProject();
     });
-
 });

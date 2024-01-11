@@ -131,6 +131,9 @@ body {
     color: rgb(0, 0, 0);
     cursor: pointer;
     user-select: none;
+    -webkit-box-shadow: 0px 0px 15px 5px
+    rgba(133,64,3,0.85); 
+    box-shadow: 0px 0px 15px 5px rgba(133,64,3,0.85);
     }
 
   .next-btn {
@@ -142,6 +145,9 @@ body {
     color: rgb(0, 0, 0);
     cursor: pointer;
     user-select: none;
+    -webkit-box-shadow: 0px 0px 15px 5px
+    rgba(133,64,3,0.85); 
+    box-shadow: 0px 0px 15px 5px rgba(133,64,3,0.85);
   }
   
   /* Initial anzeigen */
