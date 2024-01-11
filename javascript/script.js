@@ -167,14 +167,12 @@ document.addEventListener('DOMContentLoaded', function () {
             requestAnimationFrame(animateScroll);
         }
 
-    // Funktion zum Hinzufügen einer zufälligen Zeichenfolge zu einer URL
-function bustCache(url) {
-    const randomString = Math.random().toString(36).substring(7);
-    return url + '?v=' + randomString;
-}
+    // Füge einen Zufallswert zur aktuellen URL hinzu
+    const Version = 1;
+    const currentUrl = window.location.href;
+    const updatedUrl = currentUrl.includes('?') ? `${currentUrl}&version=${Version}` : `${currentUrl}?version=${Version}`;
 
-// Beispiel: Cache-Busting für ein Stylesheet
-const stylesheet = document.querySelector('link[rel="stylesheet"]');
-stylesheet.href = bustCache(stylesheet.href);
-    
+    // Leite den Benutzer zur aktualisierten URL weiter
+    window.location.href = updatedUrl;
+
 });
