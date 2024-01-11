@@ -166,5 +166,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
             requestAnimationFrame(animateScroll);
         }
+
+    // Funktion zum Hinzufügen einer zufälligen Zeichenfolge zu einer URL
+function bustCache(url) {
+    const randomString = Math.random().toString(36).substring(7);
+    return url + '?v=' + randomString;
+}
+
+// Beispiel: Cache-Busting für ein Stylesheet
+const stylesheet = document.querySelector('link[rel="stylesheet"]');
+stylesheet.href = bustCache(stylesheet.href);
     
 });
