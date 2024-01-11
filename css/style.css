@@ -1,0 +1,265 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2c2f33;
+}
+
+.navbar {
+    background-color: #000;
+    padding: 15px 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: calc(100% - 80px); /* Abstand von den Seiten */
+    top: 10px; /* Abstand von oben */
+    left: 20px; /* Abstand von links */
+    z-index: 1000;
+    border-radius: 10px; /* Abrundung der Ecken */
+    transition: width 0.3s, left 0.3s;
+    user-select: none;
+    box-shadow: 0px 10px 44px 6px rgba(0,0,0,0.48);
+}
+
+.menu {
+    cursor: pointer; /* Zeige den Mauszeiger als Zeiger an */
+    transition: 0.3s; /* Füge eine sanfte Transition hinzu */
+}
+
+.menu:hover {
+    transform: scale(1.1); /* Vergrößere das Bild beim Überfahren mit der Maus */
+}
+
+.clickable-word {
+    color: rgb(255, 0, 0); /* Farbe für den anklickbaren Text */
+    cursor: pointer;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.hykloslink {
+    color: orange;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: orange;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -400px; /* Verstecke die Sidebar außerhalb des Bildschirms */
+    width: 300px;
+    height: 100%;
+    background-color: #43474e;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    transition: left 0.3s ease-in-out;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.slider-container {
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .project {
+    margin-top: 150px;
+    width: 100%;
+    box-sizing: border-box;
+    display: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color:rgb(209, 209, 209);
+    opacity: 0; /* Startwert für die Animation */
+    animation: fadeIn 1s ease-in-out forwards; /* Animation hinzufügen */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* Startwert */
+    }
+    to {
+        opacity: 1; /* Endwert */
+    }
+}
+  
+  .project h2 {
+    margin-bottom: 10px;
+  }
+
+  .prev-btn {
+    position: absolute;
+    top: 23%;
+    left: 20px;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    user-select: none;
+    }
+
+  .next-btn {
+    position: absolute;
+    top: 23%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    user-select: none;
+  }
+  
+  /* Initial anzeigen */
+  #project1 {
+    display: block;
+  }
+
+  .slider-container2 {
+    display: flex;
+    overflow: hidden;
+    justify-content: center; /* Horizontal zentrieren */
+    align-items: center; /* Vertikal zentrieren */
+    margin: 20px;
+}
+
+.profile-slide {
+    width: 400px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: black;
+    border-radius: 10px;
+    margin-right: 20px;
+    color: white;
+    text-align: center;
+    opacity: 0; /* Startwert für die Animation */
+    animation: fadeInProfile 1s ease-in-out forwards; /* Animation hinzufügen */
+}
+
+@keyframes fadeInProfile {
+    from {
+        opacity: 0; /* Startwert */
+    }
+    to {
+        opacity: 1; /* Endwert */
+    }
+}
+
+.profile-info img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.profile-info h3 {
+    font-size: 20px; /* Beispiel für die Überschriften-Größe */
+    color: white; /* Farbe für die Überschrift */
+}
+
+.profile-info span {
+    font-size: 14px; /* Beispiel für die kleinere Text-Größe */
+    color: #888; /* Beispiel für die dunklere Textfarbe */
+}
+
+.schwarze-box {
+    background-color: #000;
+    color: #888; /* Dunklerer Text */
+    border-radius: 10px;
+    padding: 20px;
+    width: 1000px;
+    height: 160px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatten für die Box */
+    margin: 0 auto; /* Zentriere die Box horizontal */
+}
+
+  .schwarze-box h2 {
+    color: #fff; /* Weißer Titel */
+  }
+
+  .contact-container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #43474e;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+
+.contact-container h2 {
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-bottom: 8px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #888;
+    border-radius: 4px;
+}
+
+.hyklosbild {
+    user-select: none;
+}
+
+button {
+    background-color: #f57c00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ffffff;
+    color: #f57c00;
+}
