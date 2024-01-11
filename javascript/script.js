@@ -51,6 +51,14 @@ document.addEventListener('DOMContentLoaded', function () {
         document.cookie = 'notificationShown=true; expires=Fri, 31 Dec 9999 23:59:59 GMT; path=/';
     }
 
+    if (navigator.onLine) {
+        // Der Benutzer hat eine Internetverbindung
+        console.log("Online");
+    } else {
+        // Der Benutzer hat keine Internetverbindung
+        console.log("Offline");
+    }   
+
         // Navbar und Sidebar
         const menu = document.querySelector('.menu');
         const navbar = document.querySelector('.navbar');
@@ -115,4 +123,48 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.prev-btn').addEventListener('click', function () {
         prevProject();
     });
+
+    let mybutton = document.getElementById("myBtn");
+
+        window.addEventListener('scroll', scrollFunction);
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        mybutton.addEventListener('click', topFunction);
+
+        function topFunction() {
+            scrollToTop();
+        }
+
+        function scrollToTop() {
+            const startPosition = window.pageYOffset;
+            const duration = 500; // milliseconds
+            const startTime = performance.now();
+
+            function animateScroll(currentTime) {
+                const elapsedTime = currentTime - startTime;
+
+                window.scrollTo(0, easeInOutCubic(elapsedTime, startPosition, -startPosition, duration));
+
+                if (elapsedTime < duration) {
+                    requestAnimationFrame(animateScroll);
+                }
+            }
+
+            function easeInOutCubic(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t * t + b;
+                t -= 2;
+                return c / 2 * (t * t * t + 2) + b;
+            }
+
+            requestAnimationFrame(animateScroll);
+        }
+    
 });
