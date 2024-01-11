@@ -165,14 +165,6 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             requestAnimationFrame(animateScroll);
-        }
-
-    // Füge einen Zufallswert zur aktuellen URL hinzu
-    const Version = 1;
-    const currentUrl = window.location.href;
-    const updatedUrl = currentUrl.includes('?') ? `${currentUrl}&version=${Version}` : `${currentUrl}?version=${Version}`;
-
-    // Leite den Benutzer zur aktualisierten URL weiter
-    window.location.href = updatedUrl;
+        }  
 
 });
