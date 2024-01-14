@@ -151,6 +151,10 @@ body {
     margin-bottom: 15px;
 }
 
+.sidebar a:hover {
+    color: orange;
+}
+
 .slider-container {
     display: flex;
     overflow: hidden;
