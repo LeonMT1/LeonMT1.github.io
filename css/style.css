@@ -2,34 +2,35 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #2c2f33;
+    background-color: black;
+    transition: background-color 1s;
 }
 
-::-moz-selection { /* Code for Firefox */
+::-moz-selection {
     color: white;
     background: orange;
-  }
-  
-  ::selection {
+}
+
+::selection {
     color: white;
     background: orange;
-  }
+}
 
 /* width */
 ::-webkit-scrollbar {
     width: 10px;
-  }
-   
-  /* Handle */
-  ::-webkit-scrollbar-thumb {
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
     background: #f57c00; 
     border-radius: 10px;
-  }
-  
-  /* Handle on hover */
-  ::-webkit-scrollbar-thumb:hover {
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
     background: white; 
-  }
+}
 
 .notification-container {
     position: fixed;
@@ -69,28 +70,29 @@ body {
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    width: calc(100% - 80px); /* Abstand von den Seiten */
-    top: 10px; /* Abstand von oben */
-    left: 20px; /* Abstand von links */
+    width: calc(100% - 80px);
+    top: 10px;
+    left: 20px;
     z-index: 1000;
-    border-radius: 10px; /* Abrundung der Ecken */
-    transition: width 0.3s, left 0.3s;
+    border-radius: 10px;
+    transition: width 0.3s, left 0.3s, box-shadow 0.3s;
     user-select: none;
-    box-shadow: 0px 10px 44px 6px rgba(0,0,0,0.48);
+    box-shadow: 0px 10px 44px 6px rgba(0, 0, 0, 0.48);
 }
 
 .menu {
-    cursor: pointer; /* Zeige den Mauszeiger als Zeiger an */
-    transition: 0.3s; /* Füge eine sanfte Transition hinzu */
+    cursor: pointer;
+    transition: 0.3s, transform 0.3s;
 }
 
 .menu:hover {
-    transform: scale(1.1); /* Vergrößere das Bild beim Überfahren mit der Maus */
+    transform: scale(1.1);
 }
 
 .clickable-word {
-    color: rgb(255, 0, 0); /* Farbe für den anklickbaren Text */
+    color: rgb(255, 255, 255);
     cursor: pointer;
+    font-weight: bold;
 }
 
 .logo-text {
@@ -99,11 +101,15 @@ body {
     margin-left: 10px;
 }
 
-.hykloslink {
+.hykloslink, .calink {
     color: orange;
     text-decoration: none;
     font-weight: bold;
 }
+
+.hykloslink:hover, .calink:hover {
+    color: white;
+} 
 
 .nav-links {
     list-style: none;
@@ -127,7 +133,7 @@ body {
 .sidebar {
     position: fixed;
     top: 0;
-    left: -400px; /* Verstecke die Sidebar außerhalb des Bildschirms */
+    left: -400px;
     width: 300px;
     height: 100%;
     background-color: #43474e;
@@ -148,9 +154,17 @@ body {
 .slider-container {
     display: flex;
     overflow: hidden;
-  }
-  
-  .project {
+}
+
+.profilbild {
+    transition: 0.3s; 
+}
+
+.profilbild:hover {
+    transform: scale(1.1);
+}
+
+.project {
     margin-top: 150px;
     width: 100%;
     box-sizing: border-box;
@@ -161,61 +175,52 @@ body {
     align-items: center;
     justify-content: center;
     color:rgb(209, 209, 209);
-    opacity: 0; /* Startwert für die Animation */
-    animation: fadeIn 1s ease-in-out forwards; /* Animation hinzufügen */
+    opacity: 0; 
+    animation: fadeIn 1s ease-in-out forwards; 
 }
 
 @keyframes fadeIn {
     from {
-        opacity: 0; /* Startwert */
+        opacity: 0; 
     }
     to {
-        opacity: 1; /* Endwert */
+        opacity: 1; 
     }
 }
-  
-  .project h2 {
+
+.project h2 {
     margin-bottom: 10px;
-  }
+}
 
-  .prev-btn {
+.prev-btn, .next-btn {
     position: absolute;
     top: 23%;
+    font-size: 30px;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    user-select: none;
+    -webkit-box-shadow: 0px 0px 15px 5px rgba(133, 64, 3, 0.85);
+    box-shadow: 0px 0px 15px 5px rgba(133, 64, 3, 0.85);
+    transition: left 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.prev-btn {
     left: 20px;
-    transform: translateY(-50%);
-    font-size: 30px;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    user-select: none;
-    -webkit-box-shadow: 0px 0px 15px 5px
-    rgba(133,64,3,0.85); 
-    box-shadow: 0px 0px 15px 5px rgba(133,64,3,0.85);
-    }
+}
 
-  .next-btn {
-    position: absolute;
-    top: 23%;
+.next-btn {
     right: 20px;
-    transform: translateY(-50%);
-    font-size: 30px;
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-    user-select: none;
-    -webkit-box-shadow: 0px 0px 15px 5px
-    rgba(133,64,3,0.85); 
-    box-shadow: 0px 0px 15px 5px rgba(133,64,3,0.85);
-  }
-  
-  /* Initial anzeigen */
-  #project1 {
-    display: block;
-  }
+}
 
-  .slider-container2 {
+#project1 {
+    display: block;
+}
+
+.slider-container2 {
     display: flex;
     overflow: hidden;
-    justify-content: center; /* Horizontal zentrieren */
-    align-items: center; /* Vertikal zentrieren */
+    justify-content: center; 
+    align-items: center; 
     margin: 20px;
 }
 
@@ -228,16 +233,16 @@ body {
     margin-right: 20px;
     color: white;
     text-align: center;
-    opacity: 0; /* Startwert für die Animation */
-    animation: fadeInProfile 1s ease-in-out forwards; /* Animation hinzufügen */
+    opacity: 0; 
+    animation: fadeInProfile 1s ease-in-out forwards; 
 }
 
 @keyframes fadeInProfile {
     from {
-        opacity: 0; /* Startwert */
+        opacity: 0; 
     }
     to {
-        opacity: 1; /* Endwert */
+        opacity: 1; 
     }
 }
 
@@ -249,31 +254,31 @@ body {
 }
 
 .profile-info h3 {
-    font-size: 20px; /* Beispiel für die Überschriften-Größe */
-    color: white; /* Farbe für die Überschrift */
+    font-size: 20px; 
+    color: white; 
 }
 
 .profile-info span {
-    font-size: 14px; /* Beispiel für die kleinere Text-Größe */
-    color: #888; /* Beispiel für die dunklere Textfarbe */
+    font-size: 14px; 
+    color: #888; 
 }
 
 .schwarze-box {
     background-color: #000;
-    color: #888; /* Dunklerer Text */
+    color: #888; 
     border-radius: 10px;
     padding: 20px;
     width: 1000px;
     height: 160px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Schatten für die Box */
-    margin: 0 auto; /* Zentriere die Box horizontal */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    margin: 0 auto; 
 }
 
-  .schwarze-box h2 {
-    color: #fff; /* Weißer Titel */
-  }
+.schwarze-box h2 {
+    color: #fff; 
+}
 
-  .contact-container {
+.contact-container {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
@@ -309,6 +314,11 @@ textarea {
 
 .hyklosbild {
     user-select: none;
+    transition: 0.3s;
+}
+
+.hyklosbild:hover {
+    transform: scale(1.1);
 }
 
 button {
@@ -319,11 +329,13 @@ button {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s;
+    transition: scale 0.5s;
 }
 
 button:hover {
     background-color: #ffffff;
     color: #f57c00;
+    transform: scale(1.1);
 }
 
 #myBtn {
@@ -340,9 +352,41 @@ button:hover {
     cursor: pointer;
     padding: 15px;
     border-radius: 4px;
-  }
-  
-  #myBtn:hover {
+}
+
+#myBtn:hover {
     background-color: white;
     color: #f57c00;
-  }
+}
+
+.black-footer {
+    background-color: black;
+    color: gray;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    flex-wrap: wrap; 
+}
+
+.text1 {
+    margin-top: 15px;
+}
+
+.black-footer .text1 {
+    text-align: center;
+    text-decoration: none;
+    color: gray;
+}
+
+.text4 {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    order: 2; 
+    flex-basis: 100%; 
+}
+
+body.loaded {
+    background-color: #2c2f33;
+}
