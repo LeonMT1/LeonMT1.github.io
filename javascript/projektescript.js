@@ -85,8 +85,6 @@ document.addEventListener('DOMContentLoaded', function () {
             project.style.display = 'none';
         });
 
-        document.getElementById(`project${index}`).style.display = 'flex';
-
         if (index < 1) {
             currentProject = totalProjects;
         } else if (index > totalProjects) {
@@ -103,14 +101,6 @@ document.addEventListener('DOMContentLoaded', function () {
         currentProject = (currentProject - 2 + totalProjects) % totalProjects + 1;
         showProject(currentProject, totalProjects);
     }
-
-    // Automatischer Projekt-Slider
-    setInterval(nextProject, 5000);
-
-    // Event Listener für Projekt-Slider
-    document.querySelector('.next-btn').addEventListener('click', nextProject);
-
-    document.querySelector('.prev-btn').addEventListener('click', prevProject);
 
     let mybutton = document.getElementById("myBtn");
 

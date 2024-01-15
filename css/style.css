@@ -161,11 +161,12 @@ body {
 }
 
 .profilbild {
-    transition: 0.3s; 
+    transition: transform 0.3s, border-radius 0.3s;
 }
 
 .profilbild:hover {
     transform: scale(1.1);
+    border-radius: 5%;
 }
 
 .project {
@@ -322,6 +323,16 @@ textarea {
 }
 
 .hyklosbild:hover {
+    transform: scale(1.1);
+}
+
+.cabild {
+    user-select: none;
+    transform: 0,3;
+    transition: 0.3s;
+}
+
+.cabild:hover{
     transform: scale(1.1);
 }
 
