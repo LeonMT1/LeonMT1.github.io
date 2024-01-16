@@ -268,6 +268,23 @@ body {
     color: #888; 
 }
 
+.profile-info button {
+    margin-top: 10px;
+    background-color: #2c2f33;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.5s;
+}
+
+.profile-info button:hover {
+    background-color: #ffffff;
+    color: #2c2f33;
+    transform: scale(1.1);
+}
+
 .schwarze-box {
     background-color: #000;
     color: #888; 
@@ -343,8 +360,7 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    transition: scale 0.5s;
+    transition: background-color 0.3s, transform 0.5s;
 }
 
 button:hover {
