@@ -13,13 +13,14 @@ body {
     padding: 0;
     min-height: 100vh;
     font-family: var(--font);
-    background-image: url('https://cdn.discordapp.com/attachments/1186347212142297289/1196950988632895648/Screenshot_2023-08-04_153311.png?ex=65b97e79&is=65a70979&hm=611fafc1d2bea815a1ed96f697c8aab4cc63335260ecd60491ca3aea34aaf008&');
+    background-image: url('https://cdn.discordapp.com/attachments/1089233888032858193/1197280537979650168/20230225_192537.jpg?ex=65bab164&is=65a83c64&hm=bc3f957a8c392b09cc8c57198fcaefa7f5efe574e7fcd94860237f2a2d42404a&');
     opacity: 0;
     animation: 1s ease-out var(--delay) 1 transitionAnimation; /* duration/timing-function/delay/iterations/name */
     animation-fill-mode: forwards;
     background-repeat: no-repeat;
     background-size: cover;
     position: relative;
+    user-select: none;
 }
 
 button {
@@ -69,7 +70,7 @@ button:hover {
 
 .link {
     position: relative;
-    background-color: rgba(0, 0, 0, 0.103);
+    background-color: rgba(255, 255, 255, 0.103);
     color: var(--accentColor);
     border: solid var(--accentColor) 2px;
     border-radius: 10px;
@@ -106,6 +107,7 @@ button:hover {
     font-family: var(--font);
     width: 100%;
     text-align: center;
+    user-select: none;
 
     /*  animation   */
     overflow: hidden;

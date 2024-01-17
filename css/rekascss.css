@@ -13,7 +13,7 @@ body {
     padding: 0;
     min-height: 100vh;
     font-family: var(--font);
-    background-image: url('https://images.unsplash.com/photo-1468657988500-aca2be09f4c6?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-image: url('https://pbs.twimg.com/media/F3kvMTWW0AEbLum.jpg:large');
     opacity: 0;
     animation: 1s ease-out var(--delay) 1 transitionAnimation; /* duration/timing-function/delay/iterations/name */
     animation-fill-mode: forwards;
