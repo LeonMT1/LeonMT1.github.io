@@ -22,47 +22,29 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }
 
-    // Projekt-Slider
-    let currentProject = 1;
-    const totalProjects = document.querySelectorAll('.project').length;
-    showProject(currentProject, totalProjects);
-
-    function showProject(index, totalProjects) {
-        document.querySelectorAll('.project').forEach(project => {
-            project.style.display = 'none';
-        });
-
-        document.getElementById(`project${index}`).style.display = 'flex';
-
-        if (index < 1) {
-            currentProject = totalProjects;
-        } else if (index > totalProjects) {
-            currentProject = 1;
-        }
-    }
-
-    function nextProject() {
-        currentProject = (currentProject % totalProjects) + 1;
-        showProject(currentProject, totalProjects);
-    }
-
-    function prevProject() {
-        currentProject = (currentProject - 2 + totalProjects) % totalProjects + 1;
-        showProject(currentProject, totalProjects);
-    }
-
-    // Automatischer Projekt-Slider
-    setInterval(function () {
-        nextProject();
-    }, 5000);
-
-    // Event Listener für Projekt-Slider
-    document.querySelector('.next-btn').addEventListener('click', function () {
-        nextProject();
+    document.getElementById('wortMitTooltip1').addEventListener('mouseover', function() {
+        document.getElementById('tooltipContainer1').style.display = 'block';
     });
-
-    document.querySelector('.prev-btn').addEventListener('click', function () {
-        prevProject();
+    
+    document.getElementById('wortMitTooltip1').addEventListener('mouseout', function() {
+        document.getElementById('tooltipContainer1').style.display = 'none';
     });
-
+    document.getElementById('wortMitTooltip2').addEventListener('mouseover', function() {
+        document.getElementById('tooltipContainer2').style.display = 'block';
+    });
+    document.getElementById('wortMitTooltip2').addEventListener('mouseout', function() {
+        document.getElementById('tooltipContainer2').style.display = 'none';
+    });
+    document.getElementById('wortMitTooltip3').addEventListener('mouseover', function() {
+        document.getElementById('tooltipContainer3').style.display = 'block';
+    });
+    document.getElementById('wortMitTooltip3').addEventListener('mouseout', function() {
+        document.getElementById('tooltipContainer3').style.display = 'none';
+    });
+    document.getElementById('wortMitTooltip4').addEventListener('mouseover', function() {
+        document.getElementById('tooltipContainer4').style.display = 'block';
+    });
+    document.getElementById('wortMitTooltip4').addEventListener('mouseout', function() {
+        document.getElementById('tooltipContainer4').style.display = 'none';
+    });
 });

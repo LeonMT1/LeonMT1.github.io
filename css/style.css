@@ -404,6 +404,12 @@ button:hover {
     margin-top: 15px;
 }
 
+.text2 {
+    margin-top: 15px;
+    text-decoration: none;
+    color: rgb(32, 32, 32);
+}
+
 .black-footer .text1 {
     text-align: center;
     text-decoration: none;
