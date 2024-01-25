@@ -5,6 +5,32 @@ body {
     background-color: #2c2f33;
 }
 
+::-moz-selection {
+    color: white;
+    background: orange;
+}
+
+::selection {
+    color: white;
+    background: orange;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #f57c00; 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: white; 
+}
+
 .navbar {
     background-color: #000;
     padding: 15px 20px;

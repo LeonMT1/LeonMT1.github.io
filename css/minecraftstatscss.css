@@ -1,0 +1,198 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    transition: background-color 1s;
+}
+
+::-moz-selection {
+    color: white;
+    background: orange;
+}
+
+::selection {
+    color: white;
+    background: orange;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #f57c00; 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: white; 
+}
+
+.navbar {
+    background-color: #000;
+    padding: 15px 20px;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: calc(100% - 80px);
+    top: 10px;
+    left: 20px;
+    z-index: 1000;
+    border-radius: 10px;
+    transition: width 0.3s, left 0.3s, box-shadow 0.3s;
+    user-select: none;
+    box-shadow: 0px 10px 44px 6px rgba(0, 0, 0, 0.48);
+}
+
+.menu {
+    cursor: pointer;
+    transition: 0.3s, transform 0.3s;
+}
+
+.menu:hover {
+    transform: scale(1.1);
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: orange;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: white;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -400px;
+    width: 300px;
+    height: 100%;
+    background-color: #43474e;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    transition: left 0.3s ease-in-out;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.sidebar a:hover {
+    color: orange;
+}
+
+.platz {
+    margin-top: 100px;
+}
+
+button {
+    background-color: #f57c00;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #ffffff;
+    color: #f57c00;
+}
+
+.clickable-word {
+    color: #aaaaaa;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#myBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    background-color: #f57c00;
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+}
+
+#myBtn:hover {
+    background-color: white;
+    color: #f57c00;
+}
+
+.black-footer {
+    background-color: black;
+    color: gray;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    flex-wrap: wrap; 
+}
+
+.text1 {
+    margin-top: 15px;
+}
+
+.black-footer .text1 {
+    text-align: center;
+    text-decoration: none;
+    color: gray;
+}
+
+.text4 {
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    order: 2; 
+    flex-basis: 100%; 
+}
+
+body.loaded {
+    background-color: #2c2f33;
+}
