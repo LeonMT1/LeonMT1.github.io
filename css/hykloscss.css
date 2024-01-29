@@ -63,13 +63,11 @@ body {
     cursor: pointer;
 }
 
-.logo-text {
+.logo-text .cookie-team-link {
+    color: inherit; /* Erbt die Textfarbe vom Elternelement */
+    text-decoration: inherit; /* Erbt die Textdekoration vom Elternelement */
+    font-weight: bold;
     font-size: 24px;
-    font-weight: bold;
-    margin-left: 10px;
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
 }
 
 .logo-text a {

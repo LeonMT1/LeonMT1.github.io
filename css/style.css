@@ -62,6 +62,10 @@ body {
     opacity: 1;
 }
 
+.platz {
+    margin-top: 20px;
+}
+
 .navbar {
     background-color: #000;
     padding: 15px 20px;
@@ -330,6 +334,11 @@ body {
 
 .schwarze-box h2 {
     color: #fff; 
+}
+
+.schwarze-box a {
+    color: #002fff; 
+    text-decoration: none;
 }
 
 .contact-container {
