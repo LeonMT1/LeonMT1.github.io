@@ -72,6 +72,14 @@ body {
     font-weight: bold;
 }
 
+.logo-text a {
+    color: #888;
+    display: inline;
+    font-weight: normal;
+    font-size: 16px;
+    text-decoration: none; /* Entfernt die Unterstreichung */
+}
+
 .hykloslink {
     color: orange;
     text-decoration: none;
