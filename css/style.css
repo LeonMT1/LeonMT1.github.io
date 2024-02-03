@@ -110,7 +110,6 @@ body {
     background-color: black;
 }
 
-/* Zeige das Dropdown-Menü bei Hover an */
 .dropdown:hover .dropdown-content {
     display: block;
 }
