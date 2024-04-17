@@ -276,7 +276,13 @@ body {
     color: white;
     text-align: center;
     opacity: 0; 
-    animation: fadeInProfile 1s ease-in-out forwards; 
+    animation: fadeInProfile 1s ease-in-out forwards;
+    transition: border-radius 0.5s, transform 0.5s;
+}
+
+.profile-slide:hover {
+    transform: scale(1.05);
+    border-radius: 20px;
 }
 
 @keyframes fadeInProfile {
