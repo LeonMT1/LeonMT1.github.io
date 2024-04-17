@@ -1,0 +1,180 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Alle Infos zu CookieAttack 3">
+    <meta name="theme-color" content="#00e0ff">
+    <meta name="author" content="Azuriom">
+        <meta property="og:title" content="Startseite">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://craftogether.de">
+    <meta property="og:image" content="https://craftogether.de/assets/img/azuriom.png?v1.1.9">
+    <meta property="og:description" content="Alle Infos zu Craftogether 3">
+    <meta property="og:site_name" content="Craftogether 3">
+    
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="BkkKcPpwQghMScSrICaRwdEB5LpRY1bmCEzKHhch">
+
+    <title>CookieAttack</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+
+    <!-- Scripts -->
+    <script src="https://craftogether.de/assets/vendor/bootstrap/js/bootstrap.bundle.min.js?v1.1.9" defer></script>
+    <script src="https://craftogether.de/assets/vendor/axios/axios.min.js?v1.1.9" defer></script>
+    <script src="https://craftogether.de/assets/js/script.js?v1.1.9" defer></script>
+
+    <!-- Page level scripts -->
+    
+    <!-- Fonts -->
+    <link href="https://craftogether.de/assets/vendor/bootstrap-icons/bootstrap-icons.css?v1.1.9" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="https://craftogether.de/assets/vendor/bootstrap/css/bootstrap.min.css?v1.1.9" rel="stylesheet">
+    <link href="css/base.css" rel="stylesheet">
+    <link href="https://craftogether.de/assets/themes/aurora/css/style.css?v1.1.9" rel="stylesheet">
+        <style>
+    :root,
+    [data-bs-theme=light] {
+        --bs-primary: #00e0ff;
+        --bs-primary-rgb: 0, 224, 255;
+        --bs-primary-text-emphasis: #005a66;
+        --bs-primary-bg-subtle: #ccf9ff;
+        --bs-primary-border-subtle: #99f3ff;
+        --bs-link-hover-color: #00b3cc;
+        --bs-link-hover-color-rgb: 0, 179, 204;
+
+        --bs-primary-color-contrast: #000;
+        --bs-btn-primary-hover-bg: #00bed9;
+        --bs-btn-primary-active-bg: #00bed9;
+        --bs-btn-primary-focus-shadow-rgb: 0, 190, 217;
+    }
+
+    [data-bs-theme=dark] {
+        --bs-primary-text-emphasis: #008699;
+        --bs-primary-bg-subtle: #002d33;
+        --bs-primary-border-subtle: #66ecff;
+
+        --bs-link-color: #66ecff;
+        --bs-link-hover-color: #33e6ff;
+        --bs-link-color-rgb: 102, 236, 255;
+        --bs-link-hover-color-rgb: 51, 230, 255;
+    }
+</style>
+</head>
+
+<body  data-bs-theme="dark" >
+<div id="app">
+        <header class="header">
+        <div class="text-body bg-dark" data-bs-theme="dark">
+    <div class="container">
+        <div class="navbar navbar-expand-md py-0">
+            <div class="navbar-nav me-auto">
+                <span class="text-uppercase fw-bold py-2">
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-md bg-dark-subtle">
+    <div class="container">
+        <a class="navbar-brand me-4" href="index.html">
+                            <img src="img/cookieattack.png" alt="Logo">
+                    </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Navigation umschalten">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar">
+            <!-- Left Side Of Navbar -->
+            <ul class="navbar-nav me-auto">
+                                                            <li class="nav-item">
+                            <a class="nav-link " href="https://craftogether.de/staff" >Teilnehmer</a>
+                        </li>
+                                                                                <li class="nav-item">
+                            <a class="nav-link " href="https://map.craftogether.de/"  target="_blank" rel="noopener" >Livemap</a>
+                        </li>
+                                                                                <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown5" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vergangene Seasons</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown5">
+                                                                    <a class="dropdown-item " href="https://craftogether.de/craftogether-1" >
+                                        <i class="bi bi-1-circle"></i> Craftogether 1
+                                    </a>
+                                                                    <a class="dropdown-item " href="https://craftogether.de/craftogether-2" >
+                                        <i class="bi bi-2-circle"></i> Craftogether 2
+                                    </a>
+                                                            </div>
+                        </li>
+                                                                                <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown7" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sponsoren und Unterstützer</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown7">
+                                                                    <a class="dropdown-item " href="https://craftogether.de/sponsoring" >
+                                        <i class="bi bi-info-circle"></i> Informationen
+                                    </a>
+                                                                    <a class="dropdown-item " href="https://craftjunkies.de/"  target="_blank" rel="noopener" >
+                                        <i class="bi bi-box-arrow-up-right"></i> CraftJunkies.de
+                                    </a>
+                                                                    <a class="dropdown-item " href="https://ddd-engineers.de/"  target="_blank" rel="noopener" >
+                                        <i class="bi bi-box-arrow-up-right"></i> DDD Engineers GmbH
+                                    </a>
+                                                            </div>
+                        </li>
+                                                </ul>
+
+            <!-- Right Side Of Navbar -->
+            <ul class="navbar-nav ml-auto flex-row navbar-socials">
+                            </ul>
+        </div>
+    </div>
+</nav>
+    </header>
+
+    <div class="home-header z-3" style="background: url('https://craftogether.de/storage/img/ct3-front.png') top / cover no-repeat">
+        <div class="container h-100">
+            <div class="h-100 row align-items-center justify-content-center">
+                <div class="col-md-5 z-3 text-center">
+                    <h1 class="text-primary fw-bold">CookieAttack 3</h1>
+                    <p class="h5 text-light">Bist du dabei?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container content">
+        
+        
+        <h2 class="text-center text-uppercase mb-3">
+            Neuigkeiten
+        </h2>
+
+        <div class="row gy-3">
+                    </div>
+    </div>
+</div>
+
+<footer class="footer" data-bs-theme="dark">
+    <div class="text-body bg-body-secondary">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-6">
+                    Copyright © 2024 CookieAttack - All Rights Reserved.
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <a href="datenschutz.html" rel="noopener noreferrer">Datenschutz</a></div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>
