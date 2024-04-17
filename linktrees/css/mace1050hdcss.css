@@ -13,7 +13,7 @@ body {
     padding: 0;
     min-height: 100vh;
     font-family: var(--font);
-    background-image: url('https://cdn.discordapp.com/attachments/1089233888032858193/1197280537979650168/20230225_192537.jpg?ex=65bab164&is=65a83c64&hm=bc3f957a8c392b09cc8c57198fcaefa7f5efe574e7fcd94860237f2a2d42404a&');
+    background-image: url('background/mace.jpg');
     opacity: 0;
     animation: 1s ease-out var(--delay) 1 transitionAnimation; /* duration/timing-function/delay/iterations/name */
     animation-fill-mode: forwards;
