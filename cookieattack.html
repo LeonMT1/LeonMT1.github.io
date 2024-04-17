@@ -38,7 +38,7 @@
 
     <!-- Styles -->
     <link href="https://craftogether.de/assets/vendor/bootstrap/css/bootstrap.min.css?v1.1.9" rel="stylesheet">
-    <link href="css/base.css" rel="stylesheet">
+    <link href="cookieattack/css/base.css" rel="stylesheet">
     <link href="https://craftogether.de/assets/themes/aurora/css/style.css?v1.1.9" rel="stylesheet">
         <style>
     :root,
@@ -101,21 +101,20 @@
                             <a class="nav-link " href="https://craftogether.de/staff" >Teilnehmer</a>
                         </li>
                                                                                 <li class="nav-item">
-                            <a class="nav-link " href="https://map.craftogether.de/"  target="_blank" rel="noopener" >Livemap</a>
+                            <a class="nav-link " href="nichtfertig.html"  target="_blank" rel="noopener" >Livemap</a>
                         </li>
                                                                                 <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown5" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vergangene Seasons</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown5">
-                                                                    <a class="dropdown-item " href="https://craftogether.de/craftogether-1" >
+                                                                    <a class="dropdown-item " href="nichtfertig.html" >
                                         <i class="bi bi-1-circle"></i> Craftogether 1
                                     </a>
-                                                                    <a class="dropdown-item " href="https://craftogether.de/craftogether-2" >
+                                                                    <a class="dropdown-item " href="nichtfertig.html" >
                                         <i class="bi bi-2-circle"></i> Craftogether 2
                                     </a>
                                                             </div>
                         </li>
                                                                                 <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown7" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Sponsoren und Unterstützer</a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown7">
                                                                     <a class="dropdown-item " href="https://craftogether.de/sponsoring" >
                                         <i class="bi bi-info-circle"></i> Informationen
@@ -138,7 +137,18 @@
 </nav>
     </header>
 
-    <div class="home-header z-3" style="background: url('https://craftogether.de/storage/img/ct3-front.png') top / cover no-repeat">
+    <style>
+        #background {
+            animation: fadein 2s;
+        }
+    
+        @keyframes fadein {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+    </style>
+    
+    <div id="background" class="home-header z-3" style="background: url('cookieattack/img/background/1.png') top / cover no-repeat">
         <div class="container h-100">
             <div class="h-100 row align-items-center justify-content-center">
                 <div class="col-md-5 z-3 text-center">
@@ -148,16 +158,65 @@
             </div>
         </div>
     </div>
+    
+    <script>
+        var images = [
+            'cookieattack/img/background/1.png',
+            'cookieattack/img/background/2.webp',
+            'cookieattack/img/background/3.webp',
+            'cookieattack/img/background/4.png',
+            'cookieattack/img/background/5.png',
+            'cookieattack/img/background/6.png',
+            'cookieattack/img/background/7.png',
+            'cookieattack/img/background/8.png',
+            'cookieattack/img/background/9.png'
+            // Fügen Sie hier weitere URLs hinzu
+        ];
+    
+        setInterval(function() {
+            var randomImage = images[Math.floor(Math.random() * images.length)];
+            var background = document.getElementById('background');
+            background.style.backgroundImage = 'url(' + randomImage + ')';
+            background.style.animation = 'none';
+            setTimeout(function() {
+                background.style.animation = '';
+            }, 10);
+        }, 5000); // Ändert das Hintergrundbild alle 5 Sekunden
+    </script>
 
-    <div class="container content">
-        
-        
-        <h2 class="text-center text-uppercase mb-3">
-            Neuigkeiten
-        </h2>
+<script>
+    var videos = [
+        'cookieattack/video/background/1.mp4',
+        'cookieattack/video/background/2.mp4',
+        'cookieattack/video/background/3.mp4',
+        // Fügen Sie hier weitere URLs hinzu
+    ];
 
-        <div class="row gy-3">
-                    </div>
+    var videoElement = document.getElementById('background-video');
+    var currentVideoIndex = 0;
+
+    videoElement.src = videos[currentVideoIndex];
+
+    videoElement.addEventListener('ended', function() {
+        currentVideoIndex++;
+        if (currentVideoIndex >= videos.length) {
+            currentVideoIndex = 0;
+        }
+        videoElement.src = videos[currentVideoIndex];
+        videoElement.play();
+    }, false);
+</script>
+
+<div class="container content">
+    <video id="background-video" autoplay>
+        <!-- Video wird hier eingefügt -->
+    </video>
+
+    <h2 class="text-center text-uppercase mb-3">
+        Neuigkeiten
+    </h2>
+
+    <div class="row gy-3">
     </div>
 </div>
 
