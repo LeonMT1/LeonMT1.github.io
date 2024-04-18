@@ -1,0 +1,762 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Alle Infos zu Craftogether 3">
+    <meta name="theme-color" content="#00e0ff">
+    <meta name="author" content="Azuriom">
+        <meta property="og:title" content="Staff">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://craftogether.de/staff">
+    <meta property="og:image" content="https://craftogether.de/assets/img/azuriom.png?v1.1.9">
+    <meta property="og:description" content="Alle Infos zu Craftogether 3">
+    <meta property="og:site_name" content="Craftogether 3">
+    
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="BWtJVcntWBNy4EvdSaU62OrwNhJRQFdzAMnHVhuu">
+
+    <title>Teilnehmer | CookieAttack 3</title>
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/logo.png">
+
+    <!-- Scripts -->
+    <script src="https://craftogether.de/assets/vendor/bootstrap/js/bootstrap.bundle.min.js?v1.1.9" defer></script>
+    <script src="https://craftogether.de/assets/vendor/axios/axios.min.js?v1.1.9" defer></script>
+    <script src="https://craftogether.de/assets/js/script.js?v1.1.9" defer></script>
+
+    <!-- Page level scripts -->
+            <script defer data-cfasync="false" src="https://craftogether.de/assets/plugins/staff/js/glide.min.js?v1.1.9 "></script>
+        <script defer data-cfasync="false" src="https://craftogether.de/assets/plugins/staff/js/script.js?v1.1.9 "></script>
+    
+    <!-- Fonts -->
+    <link href="https://craftogether.de/assets/vendor/bootstrap-icons/bootstrap-icons.css?v1.1.9" rel="stylesheet">
+
+    <!-- Styles -->
+    <link href="https://craftogether.de/assets/vendor/bootstrap/css/bootstrap.min.css?v1.1.9" rel="stylesheet">
+    <link href="https://craftogether.de/assets/css/base.css?v1.1.9" rel="stylesheet">
+    <link href="https://craftogether.de/assets/themes/aurora/css/style.css?v1.1.9" rel="stylesheet">
+                <link href="https://craftogether.de/assets/plugins/staff/css/glide.core.min.css?v1.1.9 " rel="stylesheet">
+        <link href="https://craftogether.de/assets/plugins/staff/css/glide.theme.min.css?v1.1.9 " rel="stylesheet">
+        <link href="https://craftogether.de/assets/plugins/staff/css/style.css?v1.1.9 " rel="stylesheet">
+    <style>
+    :root,
+    [data-bs-theme=light] {
+        --bs-primary: #00e0ff;
+        --bs-primary-rgb: 0, 224, 255;
+        --bs-primary-text-emphasis: #005a66;
+        --bs-primary-bg-subtle: #ccf9ff;
+        --bs-primary-border-subtle: #99f3ff;
+        --bs-link-hover-color: #00b3cc;
+        --bs-link-hover-color-rgb: 0, 179, 204;
+
+        --bs-primary-color-contrast: #000;
+        --bs-btn-primary-hover-bg: #00bed9;
+        --bs-btn-primary-active-bg: #00bed9;
+        --bs-btn-primary-focus-shadow-rgb: 0, 190, 217;
+    }
+
+    [data-bs-theme=dark] {
+        --bs-primary-text-emphasis: #008699;
+        --bs-primary-bg-subtle: #002d33;
+        --bs-primary-border-subtle: #66ecff;
+
+        --bs-link-color: #66ecff;
+        --bs-link-hover-color: #33e6ff;
+        --bs-link-color-rgb: 102, 236, 255;
+        --bs-link-hover-color-rgb: 51, 230, 255;
+    }
+</style>
+</head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<body  data-bs-theme="dark" >
+
+<nav class="navbar navbar-expand-md bg-dark-subtle">
+    <div class="container">
+        <a class="navbar-brand me-4" href="index.html">
+                            <img src="img/cookieattack.png" alt="Logo">
+                    </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Navigation umschalten">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar">
+            <!-- Left Side Of Navbar -->
+            <ul class="navbar-nav me-auto">
+                                                            <li class="nav-item">
+                            <a class="nav-link " href="teilnehmer.html" >Teilnehmer</a>
+                        </li>
+                                                                                <li class="nav-item">
+                            <a class="nav-link " href="nichtfertig.html"  target="_blank" rel="noopener" >Livemap</a>
+                        </li>
+                                                                                <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown5" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Vergangene Seasons</a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown5">
+                                                                    <a class="dropdown-item " href="nichtfertig.html" >CookieAttack 1</a>
+                                                                    <a class="dropdown-item " href="nichtfertig.html" >CookieAttack 2</a>
+                                                            </div>
+                        </li>
+                                                                                <li class="nav-item dropdown">
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown7">
+                                                                    <a class="dropdown-item " href="https://craftogether.de/sponsoring" >
+                                        <i class="bi bi-info-circle"></i> Informationen
+                                    </a>
+                                                                    <a class="dropdown-item " href="https://craftjunkies.de/"  target="_blank" rel="noopener" >
+                                        <i class="bi bi-box-arrow-up-right"></i> CraftJunkies.de
+                                    </a>
+                                                                    <a class="dropdown-item " href="https://ddd-engineers.de/"  target="_blank" rel="noopener" >
+                                        <i class="bi bi-box-arrow-up-right"></i> DDD Engineers GmbH
+                                    </a>
+                                                            </div>
+                        </li>
+                                                </ul>
+
+            <!-- Right Side Of Navbar -->
+            <ul class="navbar-nav ml-auto flex-row navbar-socials">
+                            </ul>
+        </div>
+    </div>
+</nav>
+    </header>
+
+    <main class="container content">
+        <div id="status-message"></div>
+
+
+                                                                                                                                                                                                                                                                <div class="col-md-6 list-inline">
+
+    </div>
+</div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div class="col-12 mt-4">
+            <h2 class="content-title py-2 px-3 rounded-3 border">Administration</h2>
+        </div>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <div class="col-md-6 list-inline">
+    <div class="card flex-md-nowrap flex-row position-relative rounded-3 overflow-hidden h-100">
+                <div class="w-25 d-flex align-items-center justify-content-center mx-3 position-relative ">
+            <div
+                class="w-100 img-hover-zoom img-hover-zoom--colorize ">
+                <img class="w-100 h-100"
+                     src="cookieattack/img/mchead/leonmt1.png"
+                     alt="AufDenPoden alias Craftman_96">
+            </div>
+        </div>
+        <div class="w-75">
+            <div class="card-body">
+                <h3 class="text-center bg-transparent">LeonMT1</h3>
+                                    <p></p>
+                                <div class="mb-1 d-flex flex-wrap justify-content-center">
+                                                                        <span class="m-1"><span class="badge"
+                                                    style="background-color: #1c1cf9">Administration</span></span>
+                                                    <span class="m-1"><span class="badge"
+                                                    style="background-color: #eb29e6">Content Creator</span></span>
+                                                            </div>
+                <ul class="list-inline d-flex align-items-center justify-content-center">
+                                <a href="https://www.twitch.tv/leonmt1_" title="Twitch"
+                                   target="_blank">
+                                   <i class="fa fa-twitch"></i>
+                                </a>
+                            </li>
+                                                    <li class="list-inline-item">
+                                <a href="https://www.youtube.com/@leonmt1" title="YouTube"
+                                   target="_blank">
+                                   <i class="fa fa-youtube"></i>
+                                </a>
+                            </li>
+                                                            </ul>
+            </div>
+        </div>
+    </div>
+</div>
+                                                                                                                                                                            <div class="col-12 mt-4">
+            <h2 class="content-title py-2 px-3 rounded-3 border">Teilnehmer</h2>
+        </div>
+                                                                                    <div class="col-md-6 list-inline">
+    <div class="card flex-md-nowrap flex-row position-relative rounded-3 overflow-hidden h-100">
+                <div class="w-25 d-flex align-items-center justify-content-center mx-3 position-relative ">
+            <div
+                class="w-100 img-hover-zoom img-hover-zoom--colorize ">
+                <img class="w-100 h-100"
+                     src="https://craftogether.de/storage/img/../staff/F7yqF4iFYlmJe8WbflP2780XNeeOI1DXt7YlaWHj.png"
+                     alt="TarisCraft">
+            </div>
+        </div>
+        <div class="w-75">
+            <div class="card-body">
+                <h3 class="text-center bg-transparent">codebaran_</h3>
+                                    <p></p>
+                                <div class="mb-1 d-flex flex-wrap justify-content-center">
+                                                                       <span class="badge"style="background-color: #eb29e6">Content Creator</span>
+                                                            </div>
+                <ul class="list-inline d-flex align-items-center justify-content-center">
+                                                                        <li class="list-inline-item">
+                                <a href="https://www.twitch.tv/tarisgamingtv" title="Twitch"
+                                   target="_blank">
+                                    <i class="bi bi-twitch"></i>
+                                </a>
+                            </li>
+                                                    <li class="list-inline-item">
+                                <a href="https://www.youtube.com/@taris-gaming8232" title="Youtube"
+                                   target="_blank">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            </li>
+                                                    <li class="list-inline-item">
+                                <a href="https://www.instagram.com/tarisgaming/" title="Insta"
+                                   target="_blank">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                            </li>
+                                                            </ul>
+            </div>
+        </div>
+    </div>
+</div>
+                                                                                                                <div class="col-md-6 list-inline">
+    <div class="card flex-md-nowrap flex-row position-relative rounded-3 overflow-hidden h-100">
+                <div class="w-25 d-flex align-items-center justify-content-center mx-3 position-relative ">
+            <div
+                class="w-100 img-hover-zoom img-hover-zoom--colorize ">
+                <img class="w-100 h-100"
+                     src="https://craftogether.de/storage/img/../staff/hbbsHdosQPy8OlnDwDUj5hJtda6Ar1Q3pMVBWMzX.png"
+                     alt="Flamelighttt">
+            </div>
+        </div>
+        <div class="w-75">
+            <div class="card-body">
+                <h3 class="text-center bg-transparent">Flamelighttt</h3>
+                                    <p></p>
+                                <div class="mb-1 d-flex flex-wrap justify-content-center">
+                                                                        <span class="m-1"><span class="badge"
+                                                    style="background-color: #ff151c">Organisation</span></span>
+                                                    <span class="m-1"><span class="badge"
+                                                    style="background-color: #eb29e6">Content Creator</span></span>
+                                                            </div>
+                <ul class="list-inline d-flex align-items-center justify-content-center">
+                                                                        <li class="list-inline-item">
+                                <a href="https://www.twitch.tv/flamelighttt" title="Twitch"
+                                   target="_blank">
+                                    <i class="bi bi-twitch"></i>
+                                </a>
+                            </li>
+                                                    <li class="list-inline-item">
+                                <a href="https://www.youtube.com/channel/UCwbF2MN-p2ORcuNxmNMyJSA" title="Youtube"
+                                   target="_blank">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            </li>
+                                                    <li class="list-inline-item">
+                                <a href="https://instagram.com/flamelighttt?igshid=MTIzZWQxMDU=" title="Insta"
+                                   target="_blank">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                            </li>
+                                                            </ul>
+            </div>
+        </div>
+    </div>
+</div>
+                                                                                    <div class="col-md-6 list-inline">
+    <div class="card flex-md-nowrap flex-row position-relative rounded-3 overflow-hidden h-100">
+                <div class="w-25 d-flex align-items-center justify-content-center mx-3 position-relative ">
+            <div
+                class="w-100 img-hover-zoom img-hover-zoom--colorize ">
+                <img class="w-100 h-100"
+                     src="https://craftogether.de/storage/img/../staff/cPoVjTnmcCMIOK0Ez57NjIBWvL69IEHQbLzWoRKu.png"
+                     alt="Flunderian">
+            </div>
+        </div>
+        <div class="w-75">
+            <div class="card-body">
+                <h3 class="text-center bg-transparent">Flunderian</h3>
+                                    <p></p>
+                                <div class="mb-1 d-flex flex-wrap justify-content-center">
+                                                                        <span class="m-1"><span class="badge"
+                                                    style="background-color: #eb29e6">Content Creator</span></span>
+                                                            </div>
+                <ul class="list-inline d-flex align-items-center justify-content-center">
+                                                                        <li class="list-inline-item">
+                                <a href="https://www.twitch.tv/Flunderian" title="Twitch"
+                                   target="_blank">
+                                    <i class="bi bi-twitch"></i>
+                                </a>
+                            </li>
+                                                    <li class="list-inline-item">
+                                <a href="https://www.youtube.com/channel/UCTSlxwq7ZLfRWRyPwSLHw1w" title="YouTube"
+                                   target="_blank">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            </li>
+                                                    <li class="list-inline-item">
+                                <a href="https://www.instagram.com/flunderian/" title="Insta"
+                                   target="_blank">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                            </li>
+                                                    <li class="list-inline-item">
+                                <a href="https://twitter.com/flunderian" title="Twitter"
+                                   target="_blank">
+                                    <i class="bi bi-twitter"></i>
+                                </a>
+                            </li>
+                                                            </ul>
+            </div>
+        </div>
+    </div>
+</div>
+                                                                                    <div class="col-md-6 list-inline">
+    <div class="card flex-md-nowrap flex-row position-relative rounded-3 overflow-hidden h-100">
+                <div class="w-25 d-flex align-items-center justify-content-center mx-3 position-relative ">
+            <div
+                class="w-100 img-hover-zoom img-hover-zoom--colorize ">
+                <img class="w-100 h-100"
+                     src="https://craftogether.de/storage/img/../staff/uYJ0v0oLJT6fwW0G2TUuk9VM3Mvk9aFPtJkYXYhC.png"
+                     alt="PlayTobi">
+            </div>
+        </div>
+        <div class="w-75">
+            <div class="card-body">
+                <h3 class="text-center bg-transparent">PlayTobi</h3>
+                                    <p></p>
+                                <div class="mb-1 d-flex flex-wrap justify-content-center">
+                                                                        <span class="m-1"><span class="badge"
+                                                    style="background-color: #eb29e6">Content Creator</span></span>
+                                                            </div>
+                <ul class="list-inline d-flex align-items-center justify-content-center">
+                                                                        <li class="list-inline-item">
+                                <a href="https://www.twitch.tv/playtobii" title="Twitch"
+                                   target="_blank">
+                                    <i class="bi bi-twitch"></i>
+                                </a>
+                            </li>
+                                                    <li class="list-inline-item">
+                                <a href="https://www.youtube.com/channel/UCqrRL8BUuio8Wlrmey3r2mw" title="Youtube"
+                                   target="_blank">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            </li>
+                                                    <li class="list-inline-item">
+                                <a href="https://instagram.com/playtobi_yt" title="Instagram"
+                                   target="_blank">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                            </li>
+                                                            </ul>
+            </div>
+        </div>
+    </div>
+</div>
+                                                                                    <div class="col-md-6 list-inline">
+    <div class="card flex-md-nowrap flex-row position-relative rounded-3 overflow-hidden h-100">
+                <div class="w-25 d-flex align-items-center justify-content-center mx-3 position-relative ">
+            <div
+                class="w-100 img-hover-zoom img-hover-zoom--colorize ">
+                <img class="w-100 h-100"
+                     src="https://craftogether.de/storage/img/../staff/YtzUjnHyCqvQqWKjAZmVKxrjyIMR002J1eUgMnkK.png"
+                     alt="bluemoondani">
+            </div>
+        </div>
+        <div class="w-75">
+            <div class="card-body">
+                <h3 class="text-center bg-transparent">bluemoondani</h3>
+                                    <p></p>
+                                <div class="mb-1 d-flex flex-wrap justify-content-center">
+                                                                        <span class="m-1"><span class="badge"
+                                                    style="background-color: #eb29e6">Content Creator</span></span>
+                                                            </div>
+                <ul class="list-inline d-flex align-items-center justify-content-center">
+                                                                        <li class="list-inline-item">
+                                <a href="https://www.twitch.tv/bluemoondani" title="Twitch"
+                                   target="_blank">
+                                    <i class="bi bi-twitch"></i>
+                                </a>
+                            </li>
+                                                    <li class="list-inline-item">
+                                <a href="https://www.youtube.com/@bluemoondani" title="Youtube"
+                                   target="_blank">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            </li>
+                                                    <li class="list-inline-item">
+                                <a href="https://www.instagram.com/bluemoondanii/" title="Insta"
+                                   target="_blank">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                            </li>
+                                                            </ul>
+            </div>
+        </div>
+    </div>
+</div>
+                                                                                                                <div class="col-md-6 list-inline">
+    <div class="card flex-md-nowrap flex-row position-relative rounded-3 overflow-hidden h-100">
+                <div class="w-25 d-flex align-items-center justify-content-center mx-3 position-relative ">
+            <div
+                class="w-100 img-hover-zoom img-hover-zoom--colorize ">
+                <img class="w-100 h-100"
+                     src="https://craftogether.de/storage/img/../staff/RcwRQ711dgnvkebcdymxd7ZDSDJByeTLFuVFO1Xt.png"
+                     alt="Evonic_lp">
+            </div>
+        </div>
+        <div class="w-75">
+            <div class="card-body">
+                <h3 class="text-center bg-transparent">Evonic_lp</h3>
+                                    <p></p>
+                                <div class="mb-1 d-flex flex-wrap justify-content-center">
+                                                                        <span class="m-1"><span class="badge"
+                                                    style="background-color: #ff151c">Organisation</span></span>
+                                                    <span class="m-1"><span class="badge"
+                                                    style="background-color: #eb29e6">Content Creator</span></span>
+                                                            </div>
+                <ul class="list-inline d-flex align-items-center justify-content-center">
+                                                                        <li class="list-inline-item">
+                                <a href="https://www.twitch.tv/evonic_lp" title="Twitch"
+                                   target="_blank">
+                                    <i class="bi bi-twitch"></i>
+                                </a>
+                            </li>
+                                                            </ul>
+            </div>
+        </div>
+    </div>
+</div>
+                                                                                    <div class="col-md-6 list-inline">
+    <div class="card flex-md-nowrap flex-row position-relative rounded-3 overflow-hidden h-100">
+                <div class="w-25 d-flex align-items-center justify-content-center mx-3 position-relative ">
+            <div
+                class="w-100 img-hover-zoom img-hover-zoom--colorize ">
+                <img class="w-100 h-100"
+                     src="https://craftogether.de/storage/img/../staff/7VhGcba382YHbtBDOodcSfNNjE4iA0BROxrWoPqf.png"
+                     alt="Flixiiee">
+            </div>
+        </div>
+        <div class="w-75">
+            <div class="card-body">
+                <h3 class="text-center bg-transparent">Flixiiee</h3>
+                                    <p></p>
+                                <div class="mb-1 d-flex flex-wrap justify-content-center">
+                                                                        <span class="m-1"><span class="badge"
+                                                    style="background-color: #eb29e6">Content Creator</span></span>
+                                                            </div>
+                <ul class="list-inline d-flex align-items-center justify-content-center">
+                                                                        <li class="list-inline-item">
+                                <a href="https://www.twitch.tv/flixiiee" title="Twitch"
+                                   target="_blank">
+                                    <i class="bi bi-twitch"></i>
+                                </a>
+                            </li>
+                                                    <li class="list-inline-item">
+                                <a href="https://www.youtube.com/@flixmann8729" title="Youtube Main"
+                                   target="_blank">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            </li>
+                                                    <li class="list-inline-item">
+                                <a href="https://www.youtube.com/@flixiiee8084" title="Youtube Gaming"
+                                   target="_blank">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            </li>
+                                                    <li class="list-inline-item">
+                                <a href="https://www.instagram.com/flixiiee/" title="Insta"
+                                   target="_blank">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                            </li>
+                                                    <li class="list-inline-item">
+                                <a href="https://twitter.com/Flixiiee" title="Twitter"
+                                   target="_blank">
+                                    <i class="bi bi-twitter"></i>
+                                </a>
+                            </li>
+                                                    <li class="list-inline-item">
+                                <a href="https://www.tiktok.com/@flixmann" title="TikTok"
+                                   target="_blank">
+                                    <i class="bi bi-tiktok"></i>
+                                </a>
+                            </li>
+                                                            </ul>
+            </div>
+        </div>
+    </div>
+</div>
+                                                                                    <div class="col-md-6 list-inline">
+    <div class="card flex-md-nowrap flex-row position-relative rounded-3 overflow-hidden h-100">
+                <div class="w-25 d-flex align-items-center justify-content-center mx-3 position-relative ">
+            <div
+                class="w-100 img-hover-zoom img-hover-zoom--colorize ">
+                <img class="w-100 h-100"
+                     src="https://craftogether.de/storage/img/../staff/hK4kCuteHWBo5tyuGXBmCjySukEmOc6gCHdiVI7e.png"
+                     alt="Pieps">
+            </div>
+        </div>
+        <div class="w-75">
+            <div class="card-body">
+                <h3 class="text-center bg-transparent">Pieps</h3>
+                                    <p></p>
+                                <div class="mb-1 d-flex flex-wrap justify-content-center">
+                                                                        <span class="m-1"><span class="badge"
+                                                    style="background-color: #eb29e6">Content Creator</span></span>
+                                                            </div>
+                <ul class="list-inline d-flex align-items-center justify-content-center">
+                                                                        <li class="list-inline-item">
+                                <a href="https://www.twitch.tv/xpieps_" title="Twitch"
+                                   target="_blank">
+                                    <i class="bi bi-twitch"></i>
+                                </a>
+                            </li>
+                                                    <li class="list-inline-item">
+                                <a href="https://www.youtube.com/@xpieps_" title="Youtube"
+                                   target="_blank">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            </li>
+                                                    <li class="list-inline-item">
+                                <a href="https://www.instagram.com/xpieps_/" title="Insta"
+                                   target="_blank">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                            </li>
+                                                    <li class="list-inline-item">
+                                <a href="https://www.tiktok.com/@xpieps?lang=de-DE" title="TikTok"
+                                   target="_blank">
+                                    <i class="bi bi-tiktok"></i>
+                                </a>
+                            </li>
+                                                            </ul>
+            </div>
+        </div>
+    </div>
+</div>
+                                                                                    <div class="col-md-6 list-inline">
+    <div class="card flex-md-nowrap flex-row position-relative rounded-3 overflow-hidden h-100">
+                <div class="w-25 d-flex align-items-center justify-content-center mx-3 position-relative ">
+            <div
+                class="w-100 img-hover-zoom img-hover-zoom--colorize ">
+                <img class="w-100 h-100"
+                     src="https://craftogether.de/storage/img/../staff/23FiMRHzFRfZTiKh9GEg1FZHBGERVHXZ0Th5t3sc.png"
+                     alt="KnuddelGHG">
+            </div>
+        </div>
+        <div class="w-75">
+            <div class="card-body">
+                <h3 class="text-center bg-transparent">KnuddelGHG</h3>
+                                    <p></p>
+                                <div class="mb-1 d-flex flex-wrap justify-content-center">
+                                                                        <span class="m-1"><span class="badge"
+                                                    style="background-color: #eb29e6">Content Creator</span></span>
+                                                            </div>
+                <ul class="list-inline d-flex align-items-center justify-content-center">
+                                                                        <li class="list-inline-item">
+                                <a href="https://www.twitch.tv/knuddelghg" title="Twitch"
+                                   target="_blank">
+                                    <i class="bi bi-twitch"></i>
+                                </a>
+                            </li>
+                                                    <li class="list-inline-item">
+                                <a href="https://www.youtube.com/@bastian42069" title="Youtube"
+                                   target="_blank">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            </li>
+                                                            </ul>
+            </div>
+        </div>
+    </div>
+</div>
+                                                                                    <div class="col-md-6 list-inline">
+    <div class="card flex-md-nowrap flex-row position-relative rounded-3 overflow-hidden h-100">
+                <div class="w-25 d-flex align-items-center justify-content-center mx-3 position-relative ">
+            <div
+                class="w-100 img-hover-zoom img-hover-zoom--colorize ">
+                <img class="w-100 h-100"
+                     src="https://craftogether.de/storage/img/../staff/QqP56Ziy4g68GtUQB3tAvyWhY2TgUPCIlMCu85Qt.png"
+                     alt="FrittiertBoy">
+            </div>
+        </div>
+        <div class="w-75">
+            <div class="card-body">
+                <h3 class="text-center bg-transparent">FrittiertBoy</h3>
+                                    <p></p>
+                                <div class="mb-1 d-flex flex-wrap justify-content-center">
+                                                                        <span class="m-1"><span class="badge"
+                                                    style="background-color: #eb29e6">Content Creator</span></span>
+                                                            </div>
+                <ul class="list-inline d-flex align-items-center justify-content-center">
+                                                                        <li class="list-inline-item">
+                                <a href="https://www.twitch.tv/frittiertboy" title="Twitch"
+                                   target="_blank">
+                                    <i class="bi bi-twitch"></i>
+                                </a>
+                            </li>
+                                                    <li class="list-inline-item">
+                                <a href="https://www.tiktok.com/@frittiertboy?lang=de-DE" title="TikTok"
+                                   target="_blank">
+                                    <i class="bi bi-tiktok"></i>
+                                </a>
+                            </li>
+                                                    <li class="list-inline-item">
+                                <a href="www.youtube.com/@frittiertboy" title="Youtube"
+                                   target="_blank">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            </li>
+                                                            </ul>
+            </div>
+        </div>
+    </div>
+</div>
+                                                                                                                <div class="col-md-6 list-inline">
+    <div class="card flex-md-nowrap flex-row position-relative rounded-3 overflow-hidden h-100">
+                <div class="w-25 d-flex align-items-center justify-content-center mx-3 position-relative ">
+            <div
+                class="w-100 img-hover-zoom img-hover-zoom--colorize ">
+                <img class="w-100 h-100"
+                     src="https://craftogether.de/storage/img/../staff/UTJPp5sMTBoSQfMyBMJvNCF3ElmWxgOKps8Aqp30.png"
+                     alt="AufDenPoden alias Craftman_96">
+            </div>
+        </div>
+        <div class="w-75">
+            <div class="card-body">
+                <h3 class="text-center bg-transparent">AufDenPoden alias Craftman_96</h3>
+                                    <p></p>
+                                <div class="mb-1 d-flex flex-wrap justify-content-center">
+                                                                        <span class="m-1"><span class="badge"
+                                                    style="background-color: #1c1cf9">Administration</span></span>
+                                                    <span class="m-1"><span class="badge"
+                                                    style="background-color: #eb29e6">Content Creator</span></span>
+                                                            </div>
+                <ul class="list-inline d-flex align-items-center justify-content-center">
+                                                                        <li class="list-inline-item">
+                                <a href="https://www.twitch.tv/craftman96" title="Twitch"
+                                   target="_blank">
+                                    <i class="bi bi-twitch"></i>
+                                </a>
+                            </li>
+                                                    <li class="list-inline-item">
+                                <a href="https://dc.craftjunkies.de/" title="Discord"
+                                   target="_blank">
+                                    <i class="bi bi-discord"></i>
+                                </a>
+                            </li>
+                                                    <li class="list-inline-item">
+                                <a href="https://ts.craftjunkies.de/" title="Teamspeak"
+                                   target="_blank">
+                                    <i class="bi bi-headset"></i>
+                                </a>
+                            </li>
+                                                            </ul>
+            </div>
+        </div>
+    </div>
+</div>
+                                                                                    <div class="col-md-6 list-inline">
+    <div class="card flex-md-nowrap flex-row position-relative rounded-3 overflow-hidden h-100">
+                <div class="w-25 d-flex align-items-center justify-content-center mx-3 position-relative ">
+            <div
+                class="w-100 img-hover-zoom img-hover-zoom--colorize ">
+                <img class="w-100 h-100"
+                     src="https://craftogether.de/storage/img/../staff/EOrsp12NaTaeiDpaopX7tCkYPRMCMmiJfEjaJMUN.png"
+                     alt="Henex_">
+            </div>
+        </div>
+        <div class="w-75">
+            <div class="card-body">
+                <h3 class="text-center bg-transparent">Henex_</h3>
+                                    <p></p>
+                                <div class="mb-1 d-flex flex-wrap justify-content-center">
+                                                                        <span class="m-1"><span class="badge"
+                                                    style="background-color: #eb29e6">Content Creator</span></span>
+                                                            </div>
+                <ul class="list-inline d-flex align-items-center justify-content-center">
+                                                                        <li class="list-inline-item">
+                                <a href="https://www.twitch.tv/henex_" title="Twitch"
+                                   target="_blank">
+                                    <i class="bi bi-twitch"></i>
+                                </a>
+                            </li>
+                                                            </ul>
+            </div>
+        </div>
+    </div>
+</div>
+                                                                                    <div class="col-md-6 list-inline">
+    <div class="card flex-md-nowrap flex-row position-relative rounded-3 overflow-hidden h-100">
+                <div class="w-25 d-flex align-items-center justify-content-center mx-3 position-relative ">
+            <div
+                class="w-100 img-hover-zoom img-hover-zoom--colorize ">
+                <img class="w-100 h-100"
+                     src="https://craftogether.de/storage/img/../staff/4XNjmCYaGZz3trtnWXLuZFjdLZLiDYDsXlb5b0zL.png"
+                     alt="l_Menon_l">
+            </div>
+        </div>
+        <div class="w-75">
+            <div class="card-body">
+                <h3 class="text-center bg-transparent">l_Menon_l</h3>
+                                    <p></p>
+                                <div class="mb-1 d-flex flex-wrap justify-content-center">
+                                                                        <span class="m-1"><span class="badge"
+                                                    style="background-color: #eb29e6">Content Creator</span></span>
+                                                            </div>
+                <ul class="list-inline d-flex align-items-center justify-content-center">
+                                                                        <li class="list-inline-item">
+                                <a href="https://www.twitch.tv/esistmenon" title="Twitch"
+                                   target="_blank">
+                                    <i class="bi bi-twitch"></i>
+                                </a>
+                            </li>
+                                                            </ul>
+            </div>
+        </div>
+    </div>
+</div>
+                                        
+</div>
+                
+            </div>
+    </main>
+</div>
+
+<footer class="footer" data-bs-theme="dark">
+    <div class="text-body bg-dark-subtle py-5">
+        <div class="container">
+            <div class="row gy-3">
+                <div class="col-md-4 about">
+                    <h3 class="text-center">Craftogether 3</h3>
+                    <p>Das Team von Craftogether übernimmt keine Haftung für den Inhalt der Werbetexte von Sponsoren und Unterstützern.</p>
+                </div>
+                <div class="col-md-4 list-inline text-center social-links pt-3">
+                                    </div>
+                <div class="col-md-4 links">
+                    <h3 class="text-center">
+                        Links
+                    </h3>
+
+                    <ul class="list-unstyled text-center">
+                                                    <li>
+                                <a href="https://up.craftjunkies.de/status/craftjunkies">Serverstatus</a>
+                            </li>
+                                            </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-body bg-body-secondary">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-md-6">
+                    Copyright © 2023 Craftogether - All Rights Reserved.
+                </div>
+                <div class="col-md-6 text-md-end">
+                    Unterstützt von <a href="https://azuriom.com" target="_blank" rel="noopener noreferrer">Azuriom</a>.                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+</html>

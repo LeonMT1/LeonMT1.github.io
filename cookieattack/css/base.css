@@ -1,6 +1,8 @@
 :root,
 [data-bs-theme=light],
 [data-bs-theme=dark] {
+    --bs-primary: orange;
+    --bs-primary-rgb: 255, 165, 0;
     --bs-link-color: var(--bs-primary);
     --bs-link-color-rgb: var(--bs-primary-rgb);
     --bs-focus-ring-color: rgba(var(--bs-primary-rgb), 0.25);
