@@ -50,71 +50,6 @@
         color: black;
         transform: scale(1.1);
     }
-
-    @keyframes spin {
-      0% { transform: rotate(0deg); }
-      100% { transform: rotate(360deg); }
-    }
-
-    @keyframes transitionAnimation {
-      0% {
-        opacity: 0;
-        transform: translateY(-10px);
-      }
-      100% {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @keyframes animate {
-      0% {
-        background-position: -500%;
-      }
-      100% {
-        background-position: 500%;
-      }
-    }
-
-    @keyframes animStar {
-      from {
-        transform: translateY(0px);
-      }
-      to {
-        transform: translateY(-2000px);
-      }
-    }
-
-    .animated-background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      z-index: -1; /* Damit der Hintergrund hinter dem Inhalt liegt */
-    }
-
-    #stars1, #stars2, #stars3 {
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      background-image: url('https://www.transparenttextures.com/patterns/dark-wood.png'); /* Hintergrundbild für die Sterne */
-      animation: animate 100s linear infinite; /* Hintergrundanimation */
-    }
-
-    #stars2 {
-      animation-delay: 33s; /* Verzögerung für die zweite Animation */
-    }
-
-    #stars3 {
-      animation-delay: 66s; /* Verzögerung für die dritte Animation */
-    }
-
-    #stars1, #stars2, #stars3 {
-      background-repeat: repeat;
-      background-size: 30%;
-    }
   </style>
 </head>
 <body>
@@ -137,7 +72,7 @@
     }
 
     // Ziel-Datum
-    var targetDate = new Date("June 21, 2024 18:00:00").getTime();
+    var targetDate = new Date("June 21, 2024 15:00:00").getTime();
 
     // Aktualisiere den Countdown jede Sekunde
     var countdownInterval = setInterval(function() {
