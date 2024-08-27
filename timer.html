@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="de">
 <head>
@@ -104,3 +105,111 @@
   </script>
 </body>
 </html>
+=======
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZTBLJE6STF"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZTBLJE6STF');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown</title>
+  <button class="back" onclick="window.location.href='index.html'">🠔 Startseite</button>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      color: white; /* Änderung der Schriftfarbe auf Weiß */
+      background-color: black; /* Änderung der Hintergrundfarbe auf Schwarz */
+      margin: 0; /* Um den Standardmargenstil zu entfernen */
+      overflow: hidden; /* Um das Scrollen des Hintergrunds zu verhindern */
+    }
+    #countdown {
+      font-size: 2em;
+    }
+    .loader {
+      border: 16px solid #333; /* Dunkelgrau für den Rand */
+      border-top: 16px solid #fff; /* Weiß für den oberen Rand */
+      border-radius: 50%;
+      width: 120px;
+      height: 120px;
+      animation: spin 1s linear infinite; /* Änderung der Animation auf 1 Sekunde */
+      margin: 20px auto;
+    }
+
+    button {
+    background-color: black;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.5s;
+    }
+
+    button:hover {
+        background-color: #ffffff;
+        color: black;
+        transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+  <h1>Ungefährer Countdown bis zum CookieAttack Start</h1>
+  <div class="loader" id="loader"></div>
+  <div id="countdown" style="display:none;"></div>
+
+  <!-- Hintergrundanimation -->
+  <section class="animated-background">
+    <div id="stars1"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+  </section>
+
+  <script>
+    // Ladeanimation verstecken, wenn der Countdown geladen ist
+    function hideLoader() {
+      document.getElementById("loader").style.display = "none";
+      document.getElementById("countdown").style.display = "block";
+    }
+
+    // Ziel-Datum
+    var targetDate = new Date("June 21, 2024 15:00:00").getTime();
+
+    // Aktualisiere den Countdown jede Sekunde
+    var countdownInterval = setInterval(function() {
+      var now = new Date().getTime();
+      var distance = targetDate - now;
+
+      // Berechne Tage, Stunden, Minuten und Sekunden
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      // Anzeige des Countdowns im HTML-Element mit der ID "countdown"
+      document.getElementById("countdown").innerHTML = days + " Tage " + hours + " Stunden "
+      + minutes + " Minuten " + seconds + " Sekunden ";
+
+      // Wenn das Ziel erreicht ist, stoppe den Countdown und verstecke die Ladeanimation
+      if (distance < 0) {
+        clearInterval(countdownInterval);
+        document.getElementById("countdown").innerHTML = "Der Countdown ist abgelaufen!";
+        hideLoader();
+      }
+    }, 1000); // Aktualisiere alle 1000 Millisekunden (1 Sekunde)
+
+    // Verstecke die Ladeanimation, wenn der Countdown geladen ist
+    window.onload = function() {
+      hideLoader();
+    };
+  </script>
+</body>
+</html>
+>>>>>>> 872df90a050dced0578f1c5350b8d4488083a0c8
