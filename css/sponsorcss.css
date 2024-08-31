@@ -1,0 +1,4 @@
+img {
+    opacity: 0; /* Anfangs ist das Bild unsichtbar */
+    transition: opacity 10s; /* Übergang von opacity in 10 Sekunden */
+}
