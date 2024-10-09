@@ -64,4 +64,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
         requestAnimationFrame(animateScroll);
     }
+    AOS.init();
 });
