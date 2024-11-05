@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CookieAttack ? Whitelist</title>
+    <link rel="stylesheet" href="css/create.css">
+    <link href="https://fonts.cdnfonts.com/css/minecraft-4" rel="stylesheet">
+</head>
+<body>
+    <div class="stars"></div>
+
+    <div class="skin-container transition-small" id="skin-container">
+        <!-- Ansicht 1: Minecraft-Nameneingabe -->
+        <div id="name-input-view">
+            <input type="text" id="username" placeholder="Minecraft Name" oninput="fetchSkinLive()" />
+            <div id="skin-display">
+                <div id="loading" class="loader" style="display: none;">
+                    <div class="loader-inner"></div>
+                </div>
+                <img id="skin-image" alt="Skin wird geladen..." style="display: none;">
+            </div>
+            <!-- Weiter-Button -->
+            <button id="next-button" style="display: none;" onclick="showSizeInputView()">Weiter</button>
+        </div>
+
+        <!-- Ansicht 2: Eingabe der Größe -->
+        <div id="size-input-view" style="display: none;">
+            <label for="height-input">Wie hoch bist du?</label>
+            <div style="display: flex; align-items: center; justify-content: center;">
+                <input type="text" id="height-input" placeholder="e.g. 180" maxlength="3" inputmode="numeric" oninput="enableNextButton()" />
+                <span style="margin-left: 8px;">cm</span>
+            </div>
+            <p>Gib ein wie Hoch du bist (z.B. 180cm).</p>
+            <button id="proceed-button" style="display: none;" onclick="finalizeSelection()">Weiter</button>
+        </div>
+    </div>
+
+    <script src="js/create.js"></script>
+</body>
+</html>

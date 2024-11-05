@@ -23,6 +23,75 @@ document.querySelector(".home").addEventListener("click", (event) => {
     });
 });
 
+const modal = document.getElementById("dashboard-modal");
+const modalContent = document.querySelector(".modal-content");
+const closeButton = document.querySelector(".close-button");
+
+// Überprüfen, ob alle Elemente vorhanden sind
+if (!modal) console.error("Modal-Element nicht gefunden.");
+if (!modalContent) console.error("Modal-Inhalts-Element nicht gefunden.");
+if (!closeButton) console.error("Schließen-Button nicht gefunden.");
+
+// Funktion zum Öffnen des Modals
+function openModal() {
+    if (modal) {
+        modal.style.display = "flex";
+        modal.classList.remove("fade-out");
+        modal.classList.add("fade-in");
+        console.log("Modal geöffnet.");
+    } else {
+        console.error("Modal-Element ist nicht definiert.");
+    }
+}
+
+// Funktion zum Schließen des Modals
+function closeModal() {
+    if (modal) {
+        modal.classList.remove("fade-in");
+        modal.classList.add("fade-out");
+        console.log("Modal wird geschlossen.");
+
+        // Modal verstecken nach der Animation oder direkt
+        modal.addEventListener("animationend", handleAnimationEnd, { once: true });
+    } else {
+        console.error("Modal-Element ist nicht definiert.");
+    }
+}
+
+// Funktion zur Behandlung des Animation-Ende-Events
+function handleAnimationEnd() {
+    modal.style.display = "none";
+    modal.classList.remove("fade-out");
+    console.log("Modal vollständig ausgeblendet und versteckt.");
+}
+
+// Event Listener für den Dashboard-Button
+const dashboardButton = document.getElementById("open-dashboard-button");
+if (dashboardButton) {
+    dashboardButton.addEventListener("click", openModal);
+    console.log("Dashboard-Button Event Listener hinzugefügt.");
+} else {
+    console.error("Dashboard-Button mit der ID 'open-dashboard-button' nicht gefunden.");
+}
+
+// Event Listener für den Schließen-Button im Modal
+if (closeButton) {
+    closeButton.addEventListener("click", closeModal);
+    console.log("Schließen-Button Event Listener hinzugefügt.");
+} else {
+    console.error("Schließen-Button nicht gefunden.");
+}
+
+// Event Listener für Klicks außerhalb des Modal-Inhalts
+if (modal) {
+    modal.addEventListener("click", (event) => {
+        if (event.target === modal) {
+            closeModal();
+            console.log("Klick außerhalb des Modals erkannt. Modal wird geschlossen.");
+        }
+    });
+}
+
 function copyToClipboard() {
     const textToCopy = "play.cookieattack.de";
     const copyIcon = document.getElementById("copyIcon");
