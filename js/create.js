@@ -78,21 +78,24 @@ function finalizeSelection() {
 }
 
 function sendToDiscord(username, height) {
-    const webhookUrl = window.WEBHOOK_URL; // Verweis auf die Webhook-URL
     const request = new XMLHttpRequest();
-    request.open("POST", webhookUrl);
+    request.open("POST", "https://discord.com/api/webhooks/1303008860088434729/0THepbcCdGCFAqMcWPuqM82DQhLWFjl7jRqkJycZHK2cWW9WFh-GlJKNXy5sitSEecQI"); // Ersetze dies mit deiner Discord Webhook-URL
     request.setRequestHeader('Content-type', 'application/json');
 
     const params = {
-        username: "CookieWhitelist",
+        username: "CookieWhitelist", // Der Name, der in Discord angezeigt wird
+        avatar_url: "", // Falls gewünscht, kann hier ein Avatar-Bild-URL eingefügt werden
         content: `Neuer Eintrag:\nMinecraft Name: ${username}\nGröße: ${height} cm`
     };
 
     request.onreadystatechange = function () {
-        if (request.readyState === 4 && request.status === 204) {
-            console.log("Daten erfolgreich an Discord gesendet.");
-        } else {
-            console.error("Fehler beim Senden der Daten an Discord.");
+        if (request.readyState === 4) {
+            if (request.status === 204) {
+                console.log("Daten erfolgreich an Discord gesendet.");
+            } else {
+                console.error("Fehler beim Senden der Daten an Discord.", request.responseText);
+                alert("Fehler beim Senden der Daten an Discord.");
+            }
         }
     };
 
