@@ -1,0 +1,96 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+  }
+  
+  /* Header */
+  header {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 10px 0;
+    text-align: center;
+    backdrop-filter: blur(10px);
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  
+  nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  /* Team Einleitung */
+  .team-intro {
+    text-align: center;
+    padding: 40px;
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .team-intro h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .team-intro p {
+    font-size: 1.2rem;
+  }
+  
+  /* Teammitglied Profil */
+  .team {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .team-member {
+    text-align: center;
+    width: 30%;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .team-member h2 {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .team-member p {
+    color: #666;
+    margin-top: 5px;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    margin-top: 20px;
+  }
+  
