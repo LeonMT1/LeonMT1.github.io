@@ -1,0 +1,121 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Layout */
+  html, body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  body {
+    background-color: #f4f4f4;
+    flex: 1;
+  }
+  
+  /* Hero-Bereich */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: #fff;
+    transition: background-image 1s ease-in-out;
+  }
+  
+  .hero-text {
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 8px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin: 0;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  /* Navigationsleiste */
+  header {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9); /* Transparenter weißer Hintergrund */
+    padding: 10px 20px;
+    border-radius: 0 0 15px 15px; /* Abgerundete Ecken unten */
+    backdrop-filter: blur(10px); /* Blur-Effekt */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Leichter Schatten */
+    position: fixed; /* Fixiert den Header */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Stellt sicher, dass der Header über anderen Elementen liegt */
+  }
+  
+  nav ul {
+    list-style: none;
+    text-align: center;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin-right: 15px;
+  }
+  
+  nav ul li a {
+    color: #000; /* Schwarzer Text im Header */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+  }
+  
+  /* Hauptinhalt */
+  main {
+    padding: 80px 20px 20px; /* Platz für den fixierten Header */
+    flex: 1;
+  }
+  
+  .articles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  article {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  article h3 {
+    margin-top: 0;
+  }
+  
+  article p {
+    color: #555;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    margin-top: auto;
+  }
