@@ -28,6 +28,12 @@ body {
     font-family: 'Nunito', sans-serif;
     background-color: #1e1e1e;
     color: #e0e0e0;
+    line-height: 1.5;
+    margin: 0;
+    font-size: 16px;
+    min-height: 100vh;
+    flex-direction: column;
+    display: flex;
 }
 
 header {
@@ -52,9 +58,54 @@ header.floating {
     backdrop-filter: blur(15px);
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: #ffa500;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.5s ease;
+}
+
+a:hover {
+    color: #ffffff;
+}
+
 .logo {
-    height: 40px;
+    height: auto;
+    max-height: 40px;
+    width: auto;
+    max-width: 100%;
     user-select: none;
+}
+
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        font-size: 0.8em;
+    }
+
+    .intro-text-container {
+        font-size: 1.5em;
+        padding: 5px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
+
+@media (min-width: 768px) {
+    .content {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 nav {
@@ -76,6 +127,11 @@ nav a:hover {
     color: #ffa500;
 }
 
+button, .modal-button {
+    padding: 10px 15px;
+    font-size: 1em;
+}
+
 .dashboard-button {
     background-color: #ff7218;
     color: #fff;
@@ -95,13 +151,13 @@ nav a:hover {
 }
 
 .modal {
-    display: none; /* Unsichtbar standardmäßig */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Abdunkelung */
+    background-color: rgba(0, 0, 0, 0.7);
     justify-content: center;
     align-items: center;
     z-index: 10000;
@@ -117,7 +173,6 @@ nav a:hover {
     }
 }
 
-/* Modal-Ausblendung */
 @keyframes fadeOutModal {
     from {
         opacity: 1;
@@ -151,7 +206,6 @@ nav a:hover {
     animation: slideDown 0.3s forwards;
 }
 
-/* Buttons im Modal */
 .modal-button {
     margin: 10px;
     padding: 10px 20px;
@@ -176,11 +230,12 @@ main {
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    flex: 1;
 }
 
 .fullscreen-intro {
     position: relative;
-    width: 99.4vw;
+    width: 99.2vw;
     height: 100vh;
     background-color: #000;
     overflow: hidden;
@@ -245,6 +300,8 @@ main {
     gap: 20px;
     margin-top: 20px;
     line-height: 1.6;
+    justify-content: space-between;
+    align-items: stretch;
 }
 
 .info-box {
@@ -254,15 +311,47 @@ main {
     border-radius: 10px;
     flex: 1 1 calc(50% - 20px);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-    min-width: 280px;
     backdrop-filter: blur(10px);
     transition: border 0.3s ease, transform 0.3s ease;
     border: 2px solid transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.info-box a {
+    color: #ffa500;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.5s ease;
+}
+
+.info-box p {
+    margin-top: 2%;
+}
+
+.info-box h2 {
+    align-self: center;
 }
 
 .info-box:hover {
     border: 2px solid #ffa500;
     transform: translateY(-5px);
+}
+
+.info-box button {
+    background-color: #ff7218;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    font-size: 1em;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10%;
+    border-radius: 8px;
+    transition: background-color 0.5s ease;
+    user-select: none;
 }
 
 h1 {
@@ -317,4 +406,34 @@ blockquote {
     margin: 20px 0;
     padding-left: 20px;
     border-left: 4px solid #ff7f00;
+}
+
+.footer {
+    background-color: #2b2b2b;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    border-top: 2px solid #ff7f00;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.footer-nav a {
+    color: #ffa500;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.footer-nav a:hover {
+    color: #ffb84d;
+}
+
+.platzhalter {
+    height: 100px;
 }
