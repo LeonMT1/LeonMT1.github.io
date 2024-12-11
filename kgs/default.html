@@ -3,8 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+  <link rel="manifest" href="../favicon/site.webmanifest">
   <title>Artikel-Titel</title>
-  <link rel="stylesheet" href="../css/default.css">
+  <link rel="stylesheet" href="css/default.css">
 </head>
 <body>
   <header>
@@ -13,6 +17,7 @@
         <li><a href="../index.html">Startseite</a></li>
         <li><a href="../about.html">Über uns</a></li>
         <li><a href="../contact.html">Kontakt</a></li>
+        <li style="margin-left: auto;"><button id="dark-mode-toggle">🌙</button></li>
       </ul>
     </nav>
   </header>
@@ -22,6 +27,15 @@
       <h1>Erster Artikel</h1>
       <p><em>Veröffentlicht am 13. November 2024</em></p>
       <p>Das ist nur ein Beispiel Artikel.</p>
+    </section>
+
+    <section class="article-content">
+      <h2>Inhalt</h2>
+      <ul>
+        <li><a href="#-einleitung-">Einleitung</a></li>
+        <li><a href="#zweite-überschrift">Zweite Überschrift</a></li>
+        <li><a href="#dritte-überschrift">Dritte Überschrift</a></li>
+      </ul>
     </section>
 
     <section class="article-content">
@@ -39,5 +53,9 @@
   <footer>
     <p>&copy; 2024 Schülerzeitung. Alle Rechte vorbehalten.</p>
   </footer>
+
+  <button id="scroll-to-top" style="display: none;">⬆️</button>
+
+  <script src="js/script.js"></script>
 </body>
 </html>

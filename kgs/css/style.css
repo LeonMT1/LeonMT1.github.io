@@ -63,15 +63,40 @@
     backdrop-filter: blur(10px); /* Blur-Effekt */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Leichter Schatten */
   }
-  
+
+  header.hidden {
+    transform: translateY(-100%);
+  }
+
+  main button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  main button:hover {
+    background-color: rgb(255, 50, 50);
+  }
+
   nav ul {
     list-style: none;
-    text-align: center;
+    display: flex;
+    align-items: center;
   }
   
   nav ul li {
-    display: inline;
     margin-right: 15px;
+  }
+
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+  
+  nav ul li:nth-last-child(1) {
+    margin-left: auto;
   }
   
   nav ul li a {
@@ -79,6 +104,15 @@
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
+    margin-left: auto;
+    -webkit-text-stroke: 0.3px black;
+  }
+
+  nav ul li button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
   }
   
   /* Hauptinhalt */
@@ -119,4 +153,43 @@
     color: #fff;
     margin-top: auto;
   }
+
+  body, header, nav ul li a, .hero, .hero-text, article {
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
   
+  /* Dark mode styles */
+  body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  body.dark-mode header {
+    background: rgba(255, 255, 255, 0.1);
+  }
+  
+  body.dark-mode nav ul li a {
+    color: #ffffff;
+  }
+  
+  body.dark-mode .hero {
+    background-image: none; /* Adjust as needed */
+    background-color: #1e1e1e;
+  }
+  
+  body.dark-mode .hero-text {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  body.dark-mode article {
+    background-color: #1e1e1e;
+    border-color: #333;
+  }
+
+  body.dark-mode article p {
+    color: #b1b1b1;
+  }
+  
+  body.dark-mode footer {
+    background-color: #000;
+  }

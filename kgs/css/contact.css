@@ -63,15 +63,29 @@
     left: 0;
     z-index: 1000; /* Stellt sicher, dass der Header über anderen Elementen liegt */
   }
+
+  header.hidden {
+    transform: translateY(-100%);
+  }
   
   nav ul {
     list-style: none;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    width: 90%;
+    justify-self: center;
   }
   
   nav ul li {
-    display: inline;
     margin-right: 15px;
+  }
+
+  nav ul li:last-child {
+    margin-right: 0;
+  }
+  
+  nav ul li:nth-last-child(1) {
+    margin-left: auto;
   }
   
   nav ul li a {
@@ -79,6 +93,15 @@
     text-decoration: none;
     font-weight: bold;
     font-size: 1.1rem;
+    margin-left: auto;
+    -webkit-text-stroke: 0.3px black;
+  }
+
+  nav ul li button {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
   }
   
   /* Hauptinhalt */
@@ -119,3 +142,43 @@
     color: #fff;
     margin-top: auto;
   }
+
+/* Sanfte Übergänge für Elemente */
+body, header, nav ul li a, .hero, .hero-text, article, .article-content, .team-member, footer {
+  transition: background-color 0.5s ease, color 0.5s ease;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode header {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode nav ul li a {
+  color: #ffffff;
+}
+
+body.dark-mode .hero, body.dark-mode .team-intro, body.dark-mode .contact-intro {
+  background-color: #1e1e1e;
+}
+
+body.dark-mode .hero-text, body.dark-mode .team-member, body.dark-mode .article-content {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+body.dark-mode article, body.dark-mode .team-member, body.dark-mode .article-content {
+  background-color: #1e1e1e;
+  border-color: #333;
+}
+
+body.dark-mode footer {
+  background-color: #000;
+}
+
+body.dark-mode nav ul li button {
+  color: #ffffff;
+}
