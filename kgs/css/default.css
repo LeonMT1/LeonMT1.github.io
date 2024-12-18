@@ -221,6 +221,18 @@ body.dark-mode p{
   overflow: hidden;
 }
 
+#extra-text2 {
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  max-height: 0;
+}
+
+#extra-text3 {
+  overflow: hidden;
+  transition: max-height 0.5s ease-out;
+  max-height: 0;
+}
+
 #scroll-to-top {
   position: fixed;
   bottom: 20px;

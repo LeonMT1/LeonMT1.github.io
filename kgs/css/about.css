@@ -129,13 +129,17 @@
     }
   }
 
-  /* Footer */
   footer {
     text-align: center;
     padding: 10px;
     background-color: #333;
     color: #fff;
     margin-top: 20px;
+  }
+
+  footer a {
+    color: #fff;
+    text-decoration: none;
   }
   
 /* Sanfte Übergänge für Elemente */

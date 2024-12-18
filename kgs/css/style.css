@@ -145,13 +145,17 @@
     color: #555;
   }
   
-  /* Footer */
   footer {
     text-align: center;
     padding: 10px;
     background-color: #333;
     color: #fff;
     margin-top: auto;
+  }
+
+  footer a {
+    color: #fff;
+    text-decoration: none;
   }
 
   body, header, nav ul li a, .hero, .hero-text, article {

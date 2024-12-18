@@ -70,7 +70,28 @@ document.getElementById('toggle-text').addEventListener('click', function() {
   }
 });
 
-// Smooth scroll for internal links
+document.getElementById('toggle-text2').addEventListener('click', function() {
+  var extraText2 = document.getElementById('extra-text2');
+  if (extraText2.style.maxHeight === '0px' || extraText2.style.maxHeight === '') {
+    extraText2.style.maxHeight = extraText2.scrollHeight + 'px';
+    this.textContent = 'Weniger anzeigen';
+  } else {
+    extraText2.style.maxHeight = '0px';
+    this.textContent = 'Mehr anzeigen';
+  }
+});
+
+document.getElementById('toggle-text3').addEventListener('click', function() {
+  var extraText3 = document.getElementById('extra-text3');
+  if (extraText3.style.maxHeight === '0px' || extraText3.style.maxHeight === '') {
+    extraText3.style.maxHeight = extraText3.scrollHeight + 'px';
+    this.textContent = 'Weniger anzeigen';
+  } else {
+    extraText3.style.maxHeight = '0px';
+    this.textContent = 'Mehr anzeigen';
+  }
+});
+
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
     e.preventDefault();
